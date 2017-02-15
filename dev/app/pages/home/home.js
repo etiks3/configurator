@@ -18,7 +18,7 @@ export class HomePage {
     if(color_marker) {
       color_marker.addEventListener('click', (e) => {
           console.log('event->', e)
-          let menu_color = this.shelter.itemDisplay()
+          let menu_color = this.shelter.colorDisplay()
           let color = document.getElementById("couleur")
           color.innerHTML = menu_color;
           this.shelter.dataColorEvent()
@@ -26,15 +26,15 @@ export class HomePage {
     }
     let fabric_marker = document.getElementById("fabric_marker");
     if(fabric_marker) {
-      fabric_marker.addEventListener('click', (e) => {
-          console.log('event->', e)
-          let menu_fabric = this.shelter.itemDisplay()
-          let fabric = document.getElementById("fabric")
-          fabric.innerHTML = menu_fabric;
-          this.shelter.dataFabricEvent()
-      })
+        fabric_marker.addEventListener('click', (e) => {
+            console.log('event->', e)
+            let menu_fabric = this.shelter.fabricDisplay()
+            let fabric = document.getElementById("fabric")
+            fabric.innerHTML = menu_fabric;
+            this.shelter.dataFabricEvent();
+          });
+      }
     }
-  }
 
   initUI(){
     // remove all section before display UI
