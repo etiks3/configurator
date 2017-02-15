@@ -14,18 +14,25 @@ export class HomePage {
   }
 
   loadEventUI() {
-    let color_button = document.getElementById("color_button");
-    if(color_button) {
-      color_button.addEventListener('click', (e) => {
+    let color_marker = document.getElementById("color_marker");
+    if(color_marker) {
+      color_marker.addEventListener('click', (e) => {
           console.log('event->', e)
-          let test = this.shelter.dataCouleur()
+          let menu_color = this.shelter.itemDisplay()
           let color = document.getElementById("couleur")
-          color.innerHTML = test;
+          color.innerHTML = menu_color;
           this.shelter.dataColorEvent()
       })
     }
-    else{
-      color.innerHTML='';
+    let fabric_marker = document.getElementById("fabric_marker");
+    if(fabric_marker) {
+      fabric_marker.addEventListener('click', (e) => {
+          console.log('event->', e)
+          let menu_fabric = this.shelter.itemDisplay()
+          let fabric = document.getElementById("fabric")
+          fabric.innerHTML = menu_fabric;
+          this.shelter.dataFabricEvent()
+      })
     }
   }
 
