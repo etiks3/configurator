@@ -28,7 +28,6 @@ export class HomePage {
           else {
             color.style.visibility = 'visible';
           }
-
           this.shelter.dataColorEvent()
       });
     }
