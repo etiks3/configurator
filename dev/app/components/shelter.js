@@ -21,9 +21,10 @@ export class Shelter{
       })
     }
     dataFabricEvent(){
-      document.getElementById('dataColor').addEventListener('click', event=>{
+      document.getElementById('dataFabric').addEventListener('click', event=>{
          this.afficherElement(event.target.src);
       })
+
     }
 
     afficherElement(element){
