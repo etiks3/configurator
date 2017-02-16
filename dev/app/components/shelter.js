@@ -17,17 +17,18 @@ export class Shelter{
 
     dataColorEvent(){
       document.getElementById('dataColor').addEventListener('click', event=>{
-         this.afficherElement(event.target.src);
+         this.displayItem(event.target.src);
+         this.userSelection = [];
+         console.log(this.userSelection);
       })
     }
     dataFabricEvent(){
       document.getElementById('dataFabric').addEventListener('click', event=>{
-         this.afficherElement(event.target.src);
+         this.displayItem(event.target.src);
       })
-
     }
 
-    afficherElement(element){
+    displayItem(element){
         document.getElementById('afficher').innerHTML = `<img src="${element}" style="width:100%">`;
     }
 }
