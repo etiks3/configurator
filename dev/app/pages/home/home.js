@@ -11,29 +11,40 @@ export class HomePage {
     // this.fbService = new FirebaseService();
     this.initUI();
     this.loadEventUI();
+
   }
 
   loadEventUI() {
     let color_marker = document.getElementById("color_marker");
     if(color_marker) {
       color_marker.addEventListener('click', (e) => {
-          console.log('event->', e)
           let menu_color = this.shelter.colorDisplay()
           let color = document.getElementById("couleur")
+          //toggle pour l'affichage du menu
+          if (color.style.visibility === 'hidden') {
+            color.style.visibility = 'visible';
+          } else {
+            color.style.visibility = 'hidden';
+          }
           color.innerHTML = menu_color;
           this.shelter.dataColorEvent()
-      })
+      });
     }
     let fabric_marker = document.getElementById("fabric_marker");
     if(fabric_marker) {
         fabric_marker.addEventListener('click', (e) => {
-            console.log('event->', e)
             let menu_fabric = this.shelter.fabricDisplay()
             let fabric = document.getElementById("fabric")
+            //toggle pour l'affichage du menu
+            if (fabric.style.visibility === 'hidden') {
+              fabric.style.visibility = 'visible';
+            } else {
+              fabric.style.visibility = 'hidden';
+            }
             fabric.innerHTML = menu_fabric;
             this.shelter.dataFabricEvent();
           });
-      }
+        }
     }
 
   initUI(){
@@ -46,5 +57,4 @@ export class HomePage {
     // add page skeleton in body
     this.appBody.insertAdjacentHTML( 'afterbegin', pageSkeleton)
   }
-
 }
