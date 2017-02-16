@@ -1,13 +1,14 @@
-export function colorSkeleton(){
+export function colorMenuSkeleton(){
   return `
 <div id="dataColor" >
-  <div class="card" id="pillar">
+  <div class="card" id="cardColor1">
     <img src="./img/mat/pillar.png" style="width:100%">
-        <h4><b>Couleur 1</b></h4>
+    <h4>Couleur 1</h4>
   </div>
-  <div class="card">
-    <img src=""style="width:100%">
-      <h4><b>couleur 2</b></h4>
+  <div class="card" id="cardColor2">
+    <img src="./img/mat/Hair.png" style="width:100%">
+    <h4>couleur 2</h4>
   </div>
+</div>
   `
 }

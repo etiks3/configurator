@@ -1,5 +1,5 @@
-import { colorSkeleton } from './color-menu-ui';
-import { fabricSkeleton } from './menu-fabric-ui';
+import { colorMenuSkeleton } from './color-menu-ui';
+import { fabricMenuSkeleton } from './menu-fabric-ui';
 export class Shelter{
     constructor(){
       this.userSelection = {
@@ -9,32 +9,33 @@ export class Shelter{
     }
 
     colorDisplay(){
-        return colorSkeleton();
+        return colorMenuSkeleton();
     }
     fabricDisplay(){
-      return fabricSkeleton();
+      return fabricMenuSkeleton();
     }
 
     dataColorEvent(){
       document.getElementById('dataColor').addEventListener('click', event=>{
-        console.log(event.target.parentNode.id)
-        this.afficherElement(`./img/mat/${event.target.parentNode.id}.png`);
-        this.userSelection.color = event.target.parentNode.id
+        // console.log(event.target.parentNode)
+         this.afficherElement(event.target.src);
+         $('.fixed-action-btn').openFAB();
+        console.log(this.parentNode);
+        // this.userSelection.color = event.target.parentNode.id
       })
     }
-    dataFabricEvent(){
-      document.getElementById('dataFabric').addEventListener('click', event=>{
-        console.log(event.target.parentNode.id)
-        this.afficherElement(`<img src="./img/mat/${event.target.parentNode.id}.png">`)
-        this.userSelection.fabric = event.target.parentNode.id;
-      })
-    }
+    // dataFabricEvent(){
+    //   document.getElementById('dataFabric').addEventListener('click', event=>{
+    //     // console.log(event.target.parentNode)
+    //     this.afficherElement(`<img src="./img/mat/${event.target.parentNode}.png">`)
+    //     // this.userSelection.fabric = event.target.parentNode;
+    //   })
+    // }
+
     afficherElement(element){
-      if(element){
-        document.getElementById('afficher').insertAdjacentHTML("beforeend",`
-          <img src="./img/mat/pillar.png">
-          `)
-      }
+        document.getElementById('afficher').innerHTML = `<img src="${element}" style="width:100%">`;
+         console.log(element);
+         $('.fixed-action-btn').closeFAB()
     }
-    ///
+
 }
