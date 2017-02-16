@@ -58,3 +58,16 @@ img {
 }
 
 /*================== MARKERS ====================*/
+.fixed-action-btn{
+  position:absolute;
+  left:0px;
+  top:10px;
+}
+.btn-floating{
+  float:left;
+}
+/*================== MENUS ====================*/
+.menu{
+  width:400px;
+  height:400px;
+}
