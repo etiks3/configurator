@@ -71,3 +71,9 @@ img {
   width:400px;
   height:400px;
 }
+#fabric{
+  visibility: hidden;
+}
+#color{
+  visibility: hidden;
+}
