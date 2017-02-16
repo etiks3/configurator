@@ -17,25 +17,16 @@ export class Shelter{
 
     dataColorEvent(){
       document.getElementById('dataColor').addEventListener('click', event=>{
-        // console.log(event.target.parentNode)
          this.afficherElement(event.target.src);
-         $('.fixed-action-btn').openFAB();
-        console.log(this.parentNode);
-        // this.userSelection.color = event.target.parentNode.id
       })
     }
-    // dataFabricEvent(){
-    //   document.getElementById('dataFabric').addEventListener('click', event=>{
-    //     // console.log(event.target.parentNode)
-    //     this.afficherElement(`<img src="./img/mat/${event.target.parentNode}.png">`)
-    //     // this.userSelection.fabric = event.target.parentNode;
-    //   })
-    // }
+    dataFabricEvent(){
+      document.getElementById('dataColor').addEventListener('click', event=>{
+         this.afficherElement(event.target.src);
+      })
+    }
 
     afficherElement(element){
         document.getElementById('afficher').innerHTML = `<img src="${element}" style="width:100%">`;
-         console.log(element);
-         $('.fixed-action-btn').closeFAB()
     }
-
 }
