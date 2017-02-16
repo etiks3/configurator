@@ -8,8 +8,8 @@ export function homeSkeleton(){
         <div id="couleur"></div>
       <a id="fabric_marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
         <div id="fabric"></div>
-      <div id="afficher"></div>
     </div>
+    <div id="afficher"></div>
   </main>
   <footer class="page-footer">
       <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
