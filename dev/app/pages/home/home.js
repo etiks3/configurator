@@ -20,13 +20,15 @@ export class HomePage {
       color_marker.addEventListener('click', (e) => {
           let menu_color = this.shelter.colorDisplay()
           let color = document.getElementById("couleur")
+          color.innerHTML = menu_color;
           //toggle pour l'affichage du menu
-          if (color.style.visibility === 'hidden') {
-            color.style.visibility = 'visible';
-          } else {
+          if (color.style.visibility === 'visible') {
             color.style.visibility = 'hidden';
           }
-          color.innerHTML = menu_color;
+          else {
+            color.style.visibility = 'visible';
+          }
+
           this.shelter.dataColorEvent()
       });
     }
@@ -35,13 +37,13 @@ export class HomePage {
         fabric_marker.addEventListener('click', (e) => {
             let menu_fabric = this.shelter.fabricDisplay()
             let fabric = document.getElementById("fabric")
-            //toggle pour l'affichage du menu
-            if (fabric.style.visibility === 'hidden') {
-              fabric.style.visibility = 'visible';
-            } else {
-              fabric.style.visibility = 'hidden';
-            }
             fabric.innerHTML = menu_fabric;
+            //toggle pour l'affichage du menu
+            if (fabric.style.visibility === 'visible') {
+              fabric.style.visibility = 'hidden';
+            } else {
+              fabric.style.visibility = 'visible';
+            }
             this.shelter.dataFabricEvent();
           });
         }
