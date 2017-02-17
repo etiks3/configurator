@@ -1,3 +1,15 @@
+/**
+* @Author: Sylvain Rojas <Rojas>
+* @Date:   16-02-2017
+* @Project: Configurator
+* @Filename: home-ui.js
+* @Last modified by:   Rojas
+* @Last modified time: 17-02-2017
+* @Copyright: S.Rojas
+*/
+
+
+
 export function homeSkeleton(){
   return `
   <header>

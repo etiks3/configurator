@@ -1,3 +1,14 @@
+/**
+* @Author: Sylvain Rojas <Rojas>
+* @Date:   16-02-2017
+* @Project: Configurator
+* @Filename: style.css
+* @Last modified by:   Rojas
+* @Last modified time: 17-02-2017
+* @Copyright: S.Rojas
+*/
+
+
 
 body{
     background: url(../img/bg/bg.png) no-repeat center center fixed;
@@ -76,5 +87,5 @@ img {
 }
 #color{
   visibility: hidden;
-  
+
 }
