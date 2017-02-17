@@ -3,7 +3,7 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: app.js
-* @Last modified by:   Rojas
+* @Last modified by:   rojas
 * @Last modified time: 17-02-2017
 * @Copyright: S.Rojas
 */
@@ -26,8 +26,6 @@
   start(){
      let homePage = new HomePage(this.appBody);
   }
-
 }
-
   let myApp = new MyApp();
     myApp.start();
