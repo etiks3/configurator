@@ -8,8 +8,6 @@
 * @Copyright: S.Rojas
 */
 
-
-
 import { colorMenuSkeleton } from './color-menu-ui';
 import { fabricMenuSkeleton } from './menu-fabric-ui';
 
@@ -50,18 +48,24 @@ export class Shelter{
          this.userSelection[key] = choice;
          console.log(this.userSelection);
          $('.menu').fadeOut()
-         this.createMenu();
+         var newMenu = document.createElement("button");
+         newMenu.className = "btn-floating btn-large red";
+         document.body.appendChild(newMenu, afficher);
+
+
+        //this.createMenu();
        }
     }
-    createMenu(){
-      let btn = document.createElement("div");
-      btn.className = 'fixed-action-btn'
-       document.body.appendChild(btn);
-       let marker = document.createElement("div")
-       marker.className = 'btn-floating'
-       document.body.appendChild(marker)
-       console.log(marker);
-       this.indexMarker++;
-       console.log(this.indexMarker);
-    }
+    // createMenu(){
+    //    let marker = document.createElement("div");
+    //    marker.className = 'btn-floating btn-large red';
+    //    document.body.appendChild(marker)
+    //    let cross = document.createElement('i');
+    //    cross.className = 'material-icons'
+    //     marker.appendChild(cross);
+    //     var t = document.createTextNode("add");
+    //     let newMenu =  cross.appendChild(t);
+    //     console.log(newMenu);
+    //
+    // }
 }

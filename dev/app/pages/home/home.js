@@ -39,11 +39,11 @@ export class HomePage {
 //Event Method Group
   loadEventUI() {
     //A Function to display an item menu on click
-    let color_marker = document.getElementById("color_marker");
+    let color_marker = document.getElementById("color-marker");
     if(color_marker) {
       color_marker.addEventListener('click', (e) => {
           let menu_color = this.shelter.colorDisplay()
-          let color = document.getElementById("couleur")
+          let color = document.getElementById("color")
           color.innerHTML = menu_color;
           //toggle pour l'affichage du menu
           if (color.style.visibility === 'visible') {
@@ -56,7 +56,7 @@ export class HomePage {
       });
     }
     //A Function to display an item menu on click
-    let fabric_marker = document.getElementById("fabric_marker");
+    let fabric_marker = document.getElementById("fabric-marker");
     if(fabric_marker) {
         fabric_marker.addEventListener('click', (e) => {
             let menu_fabric = this.shelter.fabricDisplay()

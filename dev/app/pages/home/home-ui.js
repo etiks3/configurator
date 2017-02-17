@@ -15,11 +15,10 @@ export function homeSkeleton(){
   <header>
   </header>
   <main>
-  <button>clickme</button>
     <div class="fixed-action-btn">
-      <a id="color_marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
-        <div id="couleur"></div>
-      <a id="fabric_marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
+      <button id="color-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+        <div id="color"></div>
+      <a id="fabric-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
         <div id="fabric"></div>
     </div>
     <div id="afficher"></div>
