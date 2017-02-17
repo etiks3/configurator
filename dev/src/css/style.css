@@ -76,7 +76,10 @@ img {
 }
 .btn-floating{
   float:left;
+  width: 100px;
+  height: 100px;
 }
+
 /*================== MENUS ====================*/
 .menu{
   width:400px;
@@ -87,5 +90,4 @@ img {
 }
 #color{
   visibility: hidden;
-
 }

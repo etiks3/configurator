@@ -15,6 +15,7 @@ export function homeSkeleton(){
   <header>
   </header>
   <main>
+  <button>clickme</button>
     <div class="fixed-action-btn">
       <a id="color_marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
         <div id="couleur"></div>
