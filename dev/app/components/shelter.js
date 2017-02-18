@@ -8,8 +8,8 @@
 * @Copyright: S.Rojas
 */
 
-import { colorMenuSkeleton } from './color-menu-ui';
-import { fabricMenuSkeleton } from './menu-fabric-ui';
+import { colorMenuSkeleton } from './color-ui';
+import { fabricMenuSkeleton } from './fabric-ui';
 
 export class Shelter{
     constructor(){
