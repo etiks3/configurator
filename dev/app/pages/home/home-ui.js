@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 @Last modified by:   rojas
-@Last modified time: 2017-02-18T16:52:32+01:00
+@Last modified time: 2017-02-18T17:22:06+01:00
 * @Copyright: S.Rojas
 */
 

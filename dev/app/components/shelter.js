@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-18T16:56:56+01:00
+* @Last modified time: 2017-02-18T17:19:57+01:00
 * @Copyright: S.Rojas
 */
 
@@ -33,6 +33,9 @@ export class Shelter{
     roofDisplay(){
         return roofMenuSkeleton();
     }
+    structureDisplay(){
+        return roofMenuSkeleton();
+    }
 //Method to select the item
     dataColorEvent(){
      document.getElementById('dataColor').addEventListener('click', event=>{
@@ -55,6 +58,13 @@ export class Shelter{
        }
       });
     }
+    dataStructureEvent(){
+     document.getElementById('dataStructure').addEventListener('click', event=>{
+       if (event.target.nodeName === "IMG") {
+          this.displayItem(event);
+       }
+      });
+    }
 //Method to display the item in the centre of the HomePage
     displayItem(element){
       document.getElementById('display').innerHTML = `<img src="${element.target.src}" style="width:100% margin:0px auto">`;
@@ -64,9 +74,9 @@ export class Shelter{
          this.userSelection[key] = choice;
          console.log(this.userSelection);
          $('.menu').fadeOut()
-         var newMenu = document.createElement("button");
-         newMenu.className = "btn-floating btn-large red";
-         document.body.appendChild(newMenu, display);
+        //  var newMenu = document.createElement("button");
+        //  newMenu.className = "btn-floating btn-large red";
+        //  document.body.appendChild(newMenu, display);
 
 
         //this.createMenu();

@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-18T16:56:47+01:00
+* @Last modified time: 2017-02-18T17:17:38+01:00
 * @Copyright: S.Rojas
 */
 
@@ -18,7 +18,6 @@ export class HomePage {
 
   constructor(appBody){
     this.appBody = appBody
-    this.pageTitle = 'Welcome';
     this.shelter = new Shelter();
     this.initUI();
     this.loadEventUI();
@@ -58,18 +57,35 @@ export class HomePage {
     //A Function to display an item menu on click
     let roof_marker = document.getElementById("roof-marker");
     if(roof_marker) {
-      color_marker.addEventListener('click', (e) => {
+      roof_marker.addEventListener('click', (e) => {
           let menu_roof = this.shelter.roofDisplay()
           let roof = document.getElementById("roof")
           roof.innerHTML = menu_roof;
           //toggle pour l'affichage du menu
-          if (color.style.visibility === 'visible') {
-            color.style.visibility = 'hidden';
+          if (roof.style.visibility === 'visible') {
+            roof.style.visibility = 'hidden';
           }
           else {
-            color.style.visibility = 'visible';
+            roof.style.visibility = 'visible';
           }
           this.shelter.dataRoofEvent()
+      });
+    }
+    //A Function to display an item menu on click
+    let structure_marker = document.getElementById("structure-marker");
+    if(structure_marker) {
+      structure_marker.addEventListener('click', (e) => {
+          let menu_structure = this.shelter.structureDisplay()
+          let structure = document.getElementById("structure")
+          structure.innerHTML = menu_structure;
+          //toggle pour l'affichage du menu
+          if (structure.style.visibility === 'visible') {
+            structure.style.visibility = 'hidden';
+          }
+          else {
+            structure.style.visibility = 'visible';
+          }
+          this.shelter.dataStructureEvent()
       });
     }
     //A Function to display an item menu on click
