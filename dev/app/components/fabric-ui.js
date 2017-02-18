@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: menu-fabric-ui.js
-* @Last modified by:   Rojas
-* @Last modified time: 17-02-2017
+* @Last modified by:   rojas
+* @Last modified time: 2017-02-18T17:01:23+01:00
 * @Copyright: S.Rojas
 */
 
@@ -14,7 +14,7 @@ export function fabricMenuSkeleton(){
   return`
   <div id="dataFabric" class="menu">
     <div class="btn-floating red" id="cardFabric1">
-        <img id="Pilliers" data-id="pilliersenBeton" src="./img/mat/pillar.png" style="width:100%">
+        <img id="osb" data-id="OSB" src="./img/mat/osb.png" style="width:100%">
         <p>Materiaux 1</p>
     </div>
 

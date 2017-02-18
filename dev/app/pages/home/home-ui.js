@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 @Last modified by:   rojas
-@Last modified time: 2017-02-18T16:39:46+01:00
+@Last modified time: 2017-02-18T16:52:32+01:00
 * @Copyright: S.Rojas
 */
 
@@ -17,20 +17,19 @@ export function homeSkeleton(){
   <main>
     <div class="fixed-action-btn">
       <button id="foundation-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="foundations"></div>
       <button id="structure-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="structure"></div>
       <button id="fabric-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="fabric"></div>
       <button id="frontface-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="frontface"></div>
       <button id="door-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="door"></div>
       <button id="color-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <div id="color"></div>
       <button id="roof-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
-
-          <div id="foundations"></div>
-          <div id="structure"></div>
-          <div id="fabric"></div>
-          <div id="frontface"></div>
-          <div id="door"></div>
-          <div id="color"></div>
-          <div id="roof"></div>
+      <div id="roof"></div>
     </div>
           <div id="display"></div>
   </main>

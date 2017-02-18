@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-18T16:38:10+01:00
+* @Last modified time: 2017-02-18T16:56:56+01:00
 * @Copyright: S.Rojas
 */
 
@@ -30,6 +30,9 @@ export class Shelter{
     fabricDisplay(){
         return fabricMenuSkeleton();
     }
+    roofDisplay(){
+        return roofMenuSkeleton();
+    }
 //Method to select the item
     dataColorEvent(){
      document.getElementById('dataColor').addEventListener('click', event=>{
@@ -40,6 +43,13 @@ export class Shelter{
     }
     dataFabricEvent(){
      document.getElementById('dataFabric').addEventListener('click', event=>{
+       if (event.target.nodeName === "IMG") {
+          this.displayItem(event);
+       }
+      });
+    }
+    dataRoofEvent(){
+     document.getElementById('dataRoof').addEventListener('click', event=>{
        if (event.target.nodeName === "IMG") {
           this.displayItem(event);
        }

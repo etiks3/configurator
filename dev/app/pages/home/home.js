@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home.js
-* @Last modified by:   Rojas
-* @Last modified time: 17-02-2017
+* @Last modified by:   rojas
+* @Last modified time: 2017-02-18T16:56:47+01:00
 * @Copyright: S.Rojas
 */
 
@@ -56,6 +56,23 @@ export class HomePage {
       });
     }
     //A Function to display an item menu on click
+    let roof_marker = document.getElementById("roof-marker");
+    if(roof_marker) {
+      color_marker.addEventListener('click', (e) => {
+          let menu_roof = this.shelter.roofDisplay()
+          let roof = document.getElementById("roof")
+          roof.innerHTML = menu_roof;
+          //toggle pour l'affichage du menu
+          if (color.style.visibility === 'visible') {
+            color.style.visibility = 'hidden';
+          }
+          else {
+            color.style.visibility = 'visible';
+          }
+          this.shelter.dataRoofEvent()
+      });
+    }
+    //A Function to display an item menu on click
     let fabric_marker = document.getElementById("fabric-marker");
     if(fabric_marker) {
         fabric_marker.addEventListener('click', (e) => {
@@ -69,7 +86,7 @@ export class HomePage {
             } else {
               fabric.style.visibility = 'visible';
             }
-            // this.shelter.dataFabricEvent();
+             this.shelter.dataFabricEvent();
 
           });
         }
