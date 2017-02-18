@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home-ui.js
-* @Last modified by:   Rojas
-* @Last modified time: 17-02-2017
+@Last modified by:   rojas
+@Last modified time: 2017-02-18T16:39:46+01:00
 * @Copyright: S.Rojas
 */
 
@@ -33,27 +33,7 @@ export function homeSkeleton(){
           <div id="roof"></div>
     </div>
           <div id="display"></div>
-
-
-
-
-
   </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

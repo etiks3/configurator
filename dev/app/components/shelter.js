@@ -4,12 +4,18 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 17-02-2017
+* @Last modified time: 2017-02-18T16:38:10+01:00
 * @Copyright: S.Rojas
 */
 
 import { colorMenuSkeleton } from './color-ui';
 import { fabricMenuSkeleton } from './fabric-ui';
+import { foundationMenuSkeleton } from './foundation-ui';
+import { structureMenuSkeleton } from './structure-ui';
+import { doorMenuSkeleton } from './door-ui';
+import { frontfaceMenuSkeleton } from './frontface-ui';
+import { roofMenuSkeleton } from './roof-ui';
+
 
 export class Shelter{
     constructor(){
