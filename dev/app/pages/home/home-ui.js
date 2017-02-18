@@ -16,13 +16,50 @@ export function homeSkeleton(){
   </header>
   <main>
     <div class="fixed-action-btn">
+      <button id="foundation-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="structure-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="fabric-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="frontface-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="door-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
       <button id="color-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
-        <div id="color"></div>
-      <a id="fabric-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></a>
-        <div id="fabric"></div>
+      <button id="roof-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+
+          <div id="foundations"></div>
+          <div id="structure"></div>
+          <div id="fabric"></div>
+          <div id="frontface"></div>
+          <div id="door"></div>
+          <div id="color"></div>
+          <div id="roof"></div>
     </div>
-    <div id="afficher"></div>
+          <div id="display"></div>
+
+
+
+
+
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer class="page-footer">
       <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       width="257px" height="76px" viewBox="0 0 257 76" style="enable-background:new 0 0 257 76;" xml:space="preserve"

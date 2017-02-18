@@ -41,7 +41,7 @@ export class Shelter{
     }
 //Method to display the item in the centre of the HomePage
     displayItem(element){
-      document.getElementById('afficher').innerHTML = `<img src="${element.target.src}" style="width:100% margin:0px auto">`;
+      document.getElementById('display').innerHTML = `<img src="${element.target.src}" style="width:100% margin:0px auto">`;
       let choice = event.target.id;
       let key = event.target.parentNode.parentNode.parentNode.id;
        if(choice){
@@ -50,7 +50,7 @@ export class Shelter{
          $('.menu').fadeOut()
          var newMenu = document.createElement("button");
          newMenu.className = "btn-floating btn-large red";
-         document.body.appendChild(newMenu, afficher);
+         document.body.appendChild(newMenu, display);
 
 
         //this.createMenu();

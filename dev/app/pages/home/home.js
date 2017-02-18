@@ -69,6 +69,7 @@ export class HomePage {
               fabric.style.visibility = 'visible';
             }
             this.shelter.dataFabricEvent();
+            
           });
         }
     }
