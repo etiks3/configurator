@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T07:31:56+01:00
+* @Last modified time: 19-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -19,7 +19,7 @@ import { roofMenuSkeleton } from './roof-ui';
 
 export class Shelter{
     constructor(){
-      this.indexMarker = 0;
+      this.indexMarker = [0];
       this.userSelection = {};
     }
     //Method to display the item menu in a div
@@ -104,6 +104,9 @@ export class Shelter{
                  this.userSelection[key] = choice;
                  console.log(this.userSelection);
                  $('.menu').fadeOut()
+                 let markerList = document.getElementsByClassName('markers');
+                 console.log(index);
+
                }
             }
           }
