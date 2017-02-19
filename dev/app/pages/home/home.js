@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T07:18:27+01:00
+* @Last modified time: 2017-02-19T08:45:24+01:00
 * @Copyright: S.Rojas
 */
 
@@ -24,6 +24,21 @@ export class HomePage {
     this.loadEventUI();
     // this.fbService = new FirebaseService();
     this.userDataDisplay()
+    this.sideBar();
+  }
+
+  sidebar(){
+    $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  $('.collapsible').collapsible();
   }
 
   userDataDisplay(){
@@ -159,4 +174,5 @@ export class HomePage {
           });
         }
     }
+
 }
