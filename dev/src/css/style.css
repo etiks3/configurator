@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: style.css
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T08:17:15+01:00
+* @Last modified time: 19-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -45,6 +45,16 @@ img{
 }
 
 /*================== MARKERS ====================*/
+.btn-floating.btn-large i{
+    line-height: 40px;
+}
+.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left: 250px;
+    top: 100px;
+}
+
 .markers{
     display:none;
 }
@@ -65,8 +75,10 @@ img{
 
 /*================== MENUS ====================*/
 .menu{
-    width:400px;
-    height:400px;
+  width:147px;
+  position: absolute;
+  top: 151px;
+  left: 68px;
 }
 #fabric{
     visibility: hidden;
@@ -75,14 +87,30 @@ img{
     visibility: hidden;
 }
 
+/*================== MENU CARDS ====================*/
+.card .card-image{
+    position: relative;
+    border: 1px solid #6BAD4A;
+    border-radius: 5px;
+    text-align: center;
+}
+
 /*================== BUTTONS ====================*/
 
 .red{
-  background-color: #6BAD4A !important;
+    background-color: #6BAD4A !important;
 }
 .btn{
-  background-color: #6BAD4A;
-  float: right;
-  margin-top: 37px;
-  position:absolute;
+    background-color: #6BAD4A;
+    top: 4%;
+    right: 3%;
+    position: fixed;
+}
+
+/*================== DISPLAY CENTER ====================*/
+
+#display{
+    position: fixed;
+    bottom: 30%;
+    left: 30%;
 }

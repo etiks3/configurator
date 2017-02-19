@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home-ui.js
-@Last modified by:   rojas
-@Last modified time: 2017-02-19T08:44:14+01:00
+* @Last modified by:   rojas
+* @Last modified time: 19-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -16,24 +16,9 @@ export function homeSkeleton(){
 
   </header>
   <main>
-    <ul id="slide-out" class="side-nav">
-    <li><div class="userView">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
     <div class="fixed-action-btn">
-      <button id="foundation-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="foundations"></div>
       <button id="structure-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="structure"></div>
@@ -48,9 +33,8 @@ export function homeSkeleton(){
       <button id="roof-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="roof"></div>
     </div>
-          <div id="display" class="valign-wrapper"></div>
+      <div id="display" class="valign-wrapper"></div>
   </main>
-
 
   <footer class="page-footer">
 

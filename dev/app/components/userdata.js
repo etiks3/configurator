@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: userdata.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T07:58:40+01:00
+* @Last modified time: 19-02-2017
 * @Copyright: sylvain rojas
 */
 

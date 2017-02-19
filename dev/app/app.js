@@ -4,22 +4,22 @@
 * @Project: Configurator
 * @Filename: app.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T07:14:18+01:00
+* @Last modified time: 19-02-2017
 * @Copyright: S.Rojas
 */
 
 
 
-// import * as firebase from "firebase";
-// import { config } from './providers/firebase/config';
+import * as firebase from "firebase";
+import { config } from './providers/firebase/config';
 
  import { HomePage } from './pages/home/home';
 
  class MyApp {
 
   constructor(){
-    // Initialize Firebase
-    // firebase.initializeApp(config);
+    //Initialize Firebase
+    firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
   }
 
