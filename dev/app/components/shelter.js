@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-18T17:19:57+01:00
+* @Last modified time: 2017-02-19T05:28:01+01:00
 * @Copyright: S.Rojas
 */
 
@@ -17,25 +17,34 @@ import { frontfaceMenuSkeleton } from './frontface-ui';
 import { roofMenuSkeleton } from './roof-ui';
 
 
+
 export class Shelter{
     constructor(){
       this.indexMarker = 0;
       this.userSelection = {};
+
     }
 
-//Method to display the item menu in a div
-    colorDisplay(){
-        return colorMenuSkeleton();
-    }
-    fabricDisplay(){
-        return fabricMenuSkeleton();
-    }
-    roofDisplay(){
-        return roofMenuSkeleton();
-    }
-    structureDisplay(){
-        return roofMenuSkeleton();
-    }
+    //Method to display the item menu in a div
+        colorDisplay(){
+            return colorMenuSkeleton();
+        }
+        fabricDisplay(){
+            return fabricMenuSkeleton();
+        }
+        roofDisplay(){
+            return roofMenuSkeleton();
+        }
+        structureDisplay(){
+            return structureMenuSkeleton();
+        }
+        frontfaceDisplay(){
+            return frontfaceMenuSkeleton();
+        }
+        doorDisplay(){
+            return doorMenuSkeleton();
+        }
+
 //Method to select the item
     dataColorEvent(){
      document.getElementById('dataColor').addEventListener('click', event=>{
@@ -65,9 +74,16 @@ export class Shelter{
        }
       });
     }
+    datafrontfaceEvent(){
+     document.getElementById('dataFrontface').addEventListener('click', event=>{
+       if (event.target.nodeName === "IMG") {
+          this.displayItem(event);
+       }
+      });
+    }
 //Method to display the item in the centre of the HomePage
     displayItem(element){
-      document.getElementById('display').innerHTML = `<img src="${element.target.src}" style="width:100% margin:0px auto">`;
+      document.getElementById('display').innerHTML = `<img src="${element.target.src}">`;
       let choice = event.target.id;
       let key = event.target.parentNode.parentNode.parentNode.id;
        if(choice){

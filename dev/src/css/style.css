@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: style.css
-* @Last modified by:   Rojas
-* @Last modified time: 17-02-2017
+* @Last modified by:   rojas
+* @Last modified time: 2017-02-19T05:24:27+01:00
 * @Copyright: S.Rojas
 */
 
@@ -20,7 +20,7 @@ body{
 }
 footer{
     position: absolute;
-    bottom:0px;
+    bottom:0;
     width: 100%;
     height:auto;
 }
@@ -38,9 +38,13 @@ footer.page-footer{
 }
 
 #logo_footer{
-    float:left
+    float:left;
 }
-
+#display {
+    position: absolute;
+    top: 10%;
+    left: 24%;
+}
 
 
 .card {
@@ -73,6 +77,9 @@ img {
   position:absolute;
   left:0px;
   top:10px;
+  width: 10px;
+  height: 10px;
+
 }
 .btn-floating{
   float:left;
