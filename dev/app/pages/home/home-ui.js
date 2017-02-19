@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 @Last modified by:   rojas
-@Last modified time: 2017-02-18T17:22:06+01:00
+@Last modified time: 2017-02-19T05:51:13+01:00
 * @Copyright: S.Rojas
 */
 
@@ -33,11 +33,6 @@ export function homeSkeleton(){
     </div>
           <div id="display"></div>
   </main>
-
-
-
-
-
 
   <footer class="page-footer">
       <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

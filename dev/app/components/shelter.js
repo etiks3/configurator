@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T05:28:01+01:00
+* @Last modified time: 2017-02-19T05:44:52+01:00
 * @Copyright: S.Rojas
 */
 
@@ -44,6 +44,9 @@ export class Shelter{
         doorDisplay(){
             return doorMenuSkeleton();
         }
+        foundationDisplay(){
+          return foundationMenuSkeleton();
+        }
 
 //Method to select the item
     dataColorEvent(){
@@ -76,6 +79,13 @@ export class Shelter{
     }
     datafrontfaceEvent(){
      document.getElementById('dataFrontface').addEventListener('click', event=>{
+       if (event.target.nodeName === "IMG") {
+          this.displayItem(event);
+       }
+      });
+    }
+    dataFoundEvent(){
+     document.getElementById('dataFoundation').addEventListener('click', event=>{
        if (event.target.nodeName === "IMG") {
           this.displayItem(event);
        }

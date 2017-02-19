@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T05:36:18+01:00
+* @Last modified time: 2017-02-19T05:43:48+01:00
 * @Copyright: S.Rojas
 */
 
@@ -37,6 +37,22 @@ export class HomePage {
   }
 //Event Method Group
   loadEventUI() {
+    let foundation_marker = document.getElementById("foundation-marker");
+    if(foundation_marker) {
+      foundation_marker.addEventListener('click', (e) => {
+          let menu_foundation = this.shelter.foundationDisplay()
+          let foundation = document.getElementById("foundations")
+          foundation.innerHTML = menu_foundation;
+          //toggle pour l'affichage du menu
+          if (foundation.style.visibility === 'visible') {
+            foundation.style.visibility = 'hidden';
+          }
+          else {
+            foundation.style.visibility = 'visible';
+          }
+          this.shelter.dataFoundEvent()
+      });
+    }
     //A Function to display an item menu on click
     let color_marker = document.getElementById("color-marker");
     if(color_marker) {
