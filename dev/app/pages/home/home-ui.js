@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 @Last modified by:   rojas
-@Last modified time: 2017-02-19T05:51:13+01:00
+@Last modified time: 2017-02-19T06:56:29+01:00
 * @Copyright: S.Rojas
 */
 
@@ -16,25 +16,28 @@ export function homeSkeleton(){
   </header>
   <main>
     <div class="fixed-action-btn">
-      <button id="foundation-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="foundation-marker" class="marker 1 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="foundations"></div>
-      <button id="structure-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="structure-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="structure"></div>
-      <button id="fabric-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="fabric-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="fabric"></div>
-      <button id="frontface-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="frontface-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="frontface"></div>
-      <button id="door-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="door-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="door"></div>
-      <button id="color-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="color-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="color"></div>
-      <button id="roof-marker" class="btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="roof-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="roof"></div>
     </div>
           <div id="display"></div>
+            <a id ="save-btn" href="#!" class="btn waves-effect waves-green">Enregistrer</a>
   </main>
 
+
   <footer class="page-footer">
+
       <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       width="257px" height="76px" viewBox="0 0 257 76" style="enable-background:new 0 0 257 76;" xml:space="preserve"
       >

@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T05:43:48+01:00
+* @Last modified time: 2017-02-19T07:18:27+01:00
 * @Copyright: S.Rojas
 */
 
@@ -13,6 +13,7 @@
 // import { FirebaseService } from '../../providers/firebase/firebase-service';
 import { homeSkeleton } from './home-ui'
 import { Shelter } from '../../components/shelter';
+import { userData } from '../../components/userdata';
 
 export class HomePage {
 
@@ -22,8 +23,12 @@ export class HomePage {
     this.initUI();
     this.loadEventUI();
     // this.fbService = new FirebaseService();
+    this.userDataDisplay()
   }
 
+  userDataDisplay(){
+    return userData();
+  }
 //HomePage Initialization
   initUI(){
     // remove all section before display UI
@@ -71,23 +76,6 @@ export class HomePage {
       });
     }
     //A Function to display an item menu on click
-    let roof_marker = document.getElementById("roof-marker");
-    if(roof_marker) {
-      roof_marker.addEventListener('click', (e) => {
-          let menu_roof = this.shelter.roofDisplay()
-          let roof = document.getElementById("roof")
-          roof.innerHTML = menu_roof;
-          //toggle pour l'affichage du menu
-          if (roof.style.visibility === 'visible') {
-            roof.style.visibility = 'hidden';
-          }
-          else {
-            roof.style.visibility = 'visible';
-          }
-          this.shelter.dataRoofEvent()
-      });
-    }
-    //A Function to display an item menu on click
     let structure_marker = document.getElementById("structure-marker");
     if(structure_marker) {
       structure_marker.addEventListener('click', (e) => {
@@ -102,6 +90,54 @@ export class HomePage {
             structure.style.visibility = 'visible';
           }
           this.shelter.dataStructureEvent()
+      });
+    }
+    let door_marker = document.getElementById("door-marker");
+    if(door_marker) {
+      door_marker.addEventListener('click', (e) => {
+          let menu_door = this.shelter.doorDisplay()
+          let door = document.getElementById("door")
+          door.innerHTML = menu_door;
+          //toggle pour l'affichage du menu
+          if (door.style.visibility === 'visible') {
+            door.style.visibility = 'hidden';
+          }
+          else {
+            door.style.visibility = 'visible';
+          }
+          this.shelter.dataDoorEvent()
+      });
+    }
+    let frontface_marker = document.getElementById("frontface-marker");
+    if(frontface_marker) {
+      frontface_marker.addEventListener('click', (e) => {
+          let menu_frontface = this.shelter.frontfaceDisplay()
+          let frontface = document.getElementById("frontface")
+          frontface.innerHTML = menu_frontface;
+          //toggle pour l'affichage du menu
+          if (frontface.style.visibility === 'visible') {
+            frontface.style.visibility = 'hidden';
+          }
+          else {
+            frontface.style.visibility = 'visible';
+          }
+          this.shelter.datafrontfaceEvent()
+      });
+    }
+    let roof_marker = document.getElementById("roof-marker");
+    if(roof_marker) {
+      roof_marker.addEventListener('click', (e) => {
+          let menu_roof = this.shelter.roofDisplay()
+          let roof = document.getElementById("roof")
+          roof.innerHTML = menu_roof;
+          //toggle pour l'affichage du menu
+          if (roof.style.visibility === 'visible') {
+            roof.style.visibility = 'hidden';
+          }
+          else {
+            roof.style.visibility = 'visible';
+          }
+          this.shelter.dataRoofEvent()
       });
     }
     //A Function to display an item menu on click

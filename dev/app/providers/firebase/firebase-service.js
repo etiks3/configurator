@@ -1,3 +1,14 @@
+/**
+* @Author: Sylvain Rojas <rojas>
+* @Date:   2017-02-18T09:32:17+01:00
+* @Email:  sylvain.rojas@gmail.com
+* @Project: Configurator
+* @Filename: firebase-service.js
+* @Last modified by:   rojas
+* @Last modified time: 2017-02-19T06:13:30+01:00
+* @Copyright: sylvain rojas
+*/
+
 
 
 import * as firebase from "firebase";

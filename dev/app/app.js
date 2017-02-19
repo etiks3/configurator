@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: app.js
 * @Last modified by:   rojas
-* @Last modified time: 17-02-2017
+* @Last modified time: 2017-02-19T07:14:18+01:00
 * @Copyright: S.Rojas
 */
 
