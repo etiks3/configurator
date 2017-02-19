@@ -4,8 +4,8 @@
 * @Email:  sylvain.rojas@gmail.com
 * @Project: Configurator
 * @Filename: foundation-ui.js
-* @Last modified by:   rojas
-* @Last modified time: 2017-02-18T17:00:11+01:00
+@Last modified by:   rojas
+@Last modified time: 2017-02-19T07:44:43+01:00
 * @Copyright: sylvain rojas
 */
 
@@ -14,13 +14,17 @@
 export function foundationMenuSkeleton(){
   return `
 <div id="dataFoundation" class="menu">
-  <div class="btn-floating red" id="cardFoundation1">
-    <img id="foundation1" src="./img/mat/dalle.png" style="width:100%">
+  <div class="card">
+  <div class="card-image" id="cardFoundation1">
+    <img id="foundation1" src="./img/mat/dalle.png">
     <p>Fondations 1</p>
   </div>
-  <div class="btn-floating red" id="cardFoundation2">
-    <img id="foundation2" src="./img/mat/pieds.png" style="width:100%">
+  </div>
+  <div class="card">
+  <div class="card-image" id="cardFoundation2">
+    <img id="foundation2" src="./img/mat/pieds.png">
     <p>Fondations 2</p>
+  </div>
   </div>
 </div>
   `

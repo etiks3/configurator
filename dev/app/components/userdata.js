@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: userdata.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T07:21:06+01:00
+* @Last modified time: 2017-02-19T07:50:24+01:00
 * @Copyright: sylvain rojas
 */
 
@@ -15,6 +15,6 @@ export function userData() {
 
   let saveButton = document.getElementById("save-btn").addEventListener('click', _=>{
     console.log('hello');
-    
+
   });
 }
