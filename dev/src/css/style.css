@@ -16,7 +16,12 @@ body{
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-
+}
+#shelter{
+  position:absolute;
+  left: 10%;
+  width:100%;
+  height:auto ;
 }
 footer{
     position: absolute;
@@ -40,10 +45,19 @@ footer.page-footer{
 #logo_footer{
     float:left;
 }
-/*img{
-  margin:0 auto;
-}*/
-
+#reset{
+    background-color: #6BAD4A;
+    top: 1%;
+    right: 3%;
+    position: fixed;
+}
+#save-btn{
+    background-color: #6BAD4A;
+    top: 70%;
+    right: 3%;
+    position: fixed;
+    display:none;
+}
 /*================== MARKERS ====================*/
 .btn-floating.btn-large i{
     line-height: 40px;
@@ -53,8 +67,9 @@ footer.page-footer{
     width: 40px;
     height: 40px;
     left: 84px;
-    top: 109px;
+    top: 316px;
     position: relative;
+
 }
 .marker2.btn-floating.btn-large{
     width: 40px;
@@ -62,6 +77,7 @@ footer.page-footer{
     left: 432px;
     top:65px;
     position: relative;
+    visibility: hidden;
 }
 .marker3.btn-floating.btn-large{
     width: 40px;
@@ -69,48 +85,97 @@ footer.page-footer{
     left: 650px;
     top: 50px;
     position: relative;
+    visibility: hidden;
 }
-.marker4{
-    display:none;
+.marker4.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left:900px;
+    top: 0px;
+    position: relative;
+    visibility: hidden;
 }
-.marker5{
-    display:none;
+.marker5.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left:900px;
+    top: 500px;
+    position: relative;
+    visibility: hidden;
 }
-.marker6{
-    display:none;
+.marker6.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left:900px;
+    top: 500px;
+    position: relative;
+    visibility: hidden;
 }
-.marker7{
-    display:none;
+.marker7.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left:900px;
+    top: 500px;
+    position: relative;
+    visibility: hidden;
 }
-.marker8{
-    display:none;
-}
-.fixed-action-btn{
+
+.choice1{
     position:absolute;
     left:0px;
+    top:176px;
+    width: 10px;
+    height: 10px;
+}
+.choice2{
+    position:absolute;
+    left:-85px;
+    top:78px;
+    width: 10px;
+    height: 10px;
+}
+.choice3{
+    position:absolute;
+    left:-23px;
+    top:88px;
+    width: 10px;
+    height: 10px;
+}
+.choice4{
+    position:absolute;
+    left:25px;
+    top:150px;
+    width: 10px;
+    height: 10px;
+}
+.choice5{
+    position:absolute;
+    left:273px;
     top:10px;
     width: 10px;
     height: 10px;
-
 }
-/*.btn-floating{
-    float:left;
-    width: 100px;
-    height: 100px;
-    background-color:green;
-}*/
+.choice6{
+    position:absolute;
+    left:318px;
+    top:337px;
+    width: 10px;
+    height: 10px;
+}
+.choice7{
+    position:absolute;
+    left:234px;
+    top:-275px;
+    width: 10px;
+    height: 10px;
+}
+
 
 /*================== MENUS ====================*/
-/*.menu{
-  width:147px;
-  position: absolute;
-  top: 151px;
-  left: 68px;
-}*/
 #dataFoundation{
   position: absolute;
   left: 120px;
-  top:-16px;
+  top:188px;
   width:147px
 }
 #dataStructure{
@@ -125,14 +190,30 @@ footer.page-footer{
     top: 7px;
     width: 147px;
 }
-
-/*================== MENU CARDS ====================*/
-/*.card .card-image{
-    position: relative;
-    border: 1px solid #6BAD4A;
-    border-radius: 5px;
-    text-align: center;
-}*/
+#dataFrontface{
+    position: absolute;
+    left: 935px;
+    top: -2px;
+    width: 147px;
+}
+#dataColor{
+    position: absolute;
+    left: 935px;
+    top: -2px;
+    width: 147px;
+}
+#dataDoor{
+    position: absolute;
+    left: 935px;
+    top: -2px;
+    width: 147px;
+}
+#dataRoof{
+    position: absolute;
+    left: 935px;
+    top: 371px;
+    width: 147px;
+}
 
 /*================== BUTTONS ====================*/
 
@@ -150,6 +231,10 @@ footer.page-footer{
 
 #display{
     position: fixed;
-    bottom: 30%;
-    left: 30%;
+    bottom: 50%;
+    left: 29%;
+}
+#display img{
+  width: 800px;
+  position:   absolute;
 }
