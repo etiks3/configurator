@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: style.css
 * @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified time: 20-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -40,22 +40,49 @@ footer.page-footer{
 #logo_footer{
     float:left;
 }
-img{
+/*img{
   margin:0 auto;
-}
+}*/
 
 /*================== MARKERS ====================*/
 .btn-floating.btn-large i{
     line-height: 40px;
 }
-.btn-floating.btn-large{
+
+.marker1.btn-floating.btn-large{
     width: 40px;
     height: 40px;
-    left: 250px;
-    top: 100px;
+    left: 84px;
+    top: 109px;
+    position: relative;
 }
-
-.markers{
+.marker2.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left: 432px;
+    top:65px;
+    position: relative;
+}
+.marker3.btn-floating.btn-large{
+    width: 40px;
+    height: 40px;
+    left: 650px;
+    top: 50px;
+    position: relative;
+}
+.marker4{
+    display:none;
+}
+.marker5{
+    display:none;
+}
+.marker6{
+    display:none;
+}
+.marker7{
+    display:none;
+}
+.marker8{
     display:none;
 }
 .fixed-action-btn{
@@ -66,34 +93,46 @@ img{
     height: 10px;
 
 }
-.btn-floating{
+/*.btn-floating{
     float:left;
     width: 100px;
     height: 100px;
     background-color:green;
-}
+}*/
 
 /*================== MENUS ====================*/
-.menu{
+/*.menu{
   width:147px;
   position: absolute;
   top: 151px;
   left: 68px;
+}*/
+#dataFoundation{
+  position: absolute;
+  left: 120px;
+  top:-16px;
+  width:147px
 }
-#fabric{
-    visibility: hidden;
+#dataStructure{
+  position: absolute;
+  left: 469px;
+  top: -20px;
+  width: 147px;
 }
-#color{
-    visibility: hidden;
+#dataFabric{
+    position: absolute;
+    left: 687px;
+    top: 7px;
+    width: 147px;
 }
 
 /*================== MENU CARDS ====================*/
-.card .card-image{
+/*.card .card-image{
     position: relative;
     border: 1px solid #6BAD4A;
     border-radius: 5px;
     text-align: center;
-}
+}*/
 
 /*================== BUTTONS ====================*/
 

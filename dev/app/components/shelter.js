@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified time: 20-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -57,7 +57,7 @@ export class Shelter{
              document.getElementById('dataFabric').addEventListener('click', event=>{
                if (event.target.nodeName === "IMG") {
                   this.displayItem(event);
-               }
+                }
               });
             }
             dataRoofEvent(){
@@ -82,10 +82,10 @@ export class Shelter{
               });
             }
             dataFoundEvent(){
-             document.getElementById('dataFoundation').addEventListener('click', event=>{
+              document.getElementById('dataFoundation').addEventListener('click', event=>{
                if (event.target.nodeName === "IMG") {
                   this.displayItem(event);
-               }
+                }
               });
             }
             dataDoorEvent(){
@@ -103,9 +103,10 @@ export class Shelter{
                if(choice){
                  this.userSelection[key] = choice;
                  console.log(this.userSelection);
-                 $('.menu').fadeOut()
-                 let markerList = document.getElementsByClassName('markers');
-                 console.log(index);
+                 $('.menu').fadeOut("slow")
+                 let markersList = document.getElementsByClassName('markers')[1];
+                 let markers = this.indexMarker.markersList ++;
+
 
                }
             }

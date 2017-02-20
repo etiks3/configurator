@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified time: 20-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -20,17 +20,17 @@ export function homeSkeleton(){
     <div class="fixed-action-btn">
       <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="foundations"></div>
-      <button id="structure-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="structure-marker" class="marker2 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="structure"></div>
-      <button id="fabric-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="fabric-marker" class="marker3 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="fabric"></div>
-      <button id="frontface-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="frontface-marker" class="marker4 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="frontface"></div>
-      <button id="door-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="door-marker" class="marker5 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="door"></div>
-      <button id="color-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="color-marker" class="marker6 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="color"></div>
-      <button id="roof-marker" class="markers btn-floating btn-large red"><i class="material-icons">add</i></button>
+      <button id="roof-marker" class="marker7 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="roof"></div>
     </div>
       <div id="display" class="valign-wrapper"></div>

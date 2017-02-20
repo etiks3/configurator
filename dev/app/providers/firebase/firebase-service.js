@@ -5,13 +5,14 @@
 * @Project: Configurator
 * @Filename: firebase-service.js
 * @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified time: 20-02-2017
 * @Copyright: sylvain rojas
 */
 
 
 
 import * as firebase from "firebase";
+// import { userSelection } from "../components/shelter"
 
 export class FirebaseService{
 
@@ -21,12 +22,12 @@ export class FirebaseService{
     console.log('firebase ready-> ', this.database);
   }
 
-  create(collection, datasObject) {
+  create(collection, userSelection) {
     // define firebase collection with correct style
     collection = `${collection}/`;
 
     return new Promise((resolve, reject) => {
-        let created = this.database.ref(collection).push(datasObject);
+        let created = this.database.ref(collection).push(userSelction);
         if(created) {
             resolve(created);
         }
@@ -38,6 +39,7 @@ export class FirebaseService{
 
   read(collection){
     return this.database.ref(collection);
+    console.log(collection)
   }
 
   update(collection, key, datasObject){
