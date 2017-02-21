@@ -1,7 +1,7 @@
 {
   "name": "configurateur",
   "version": "1.0.0",
-  "description": "Un configurateur de produit pour kalpan-solutions",
+  "description": "Un configurateur de produit pour kalpana-solutions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
