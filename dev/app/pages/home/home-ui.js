@@ -16,6 +16,7 @@ export function homeSkeleton(){
 
   </header>
   <main>
+  <div id="test"></div>
   <div id="shelter">
   <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
   <a id="reset" class="waves-effect waves-light btn">Effacer</a>
@@ -43,12 +44,10 @@ export function homeSkeleton(){
       <button id="color-marker" class="marker6 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="color"></div>
     </div>
-    <div class="choice7 fixed-action-btn">
-      <button id="roof-marker" class="marker7 btn-floating btn-large red"><i class="material-icons">add</i></button>
-      <div id="roof"></div>
-    </div>
-      <div id="display" class="valign-wrapper"></div>
+
+
       </div>
+      <div id="display" class="valign-wrapper"></div>
   </main>
 
   <footer class="page-footer">

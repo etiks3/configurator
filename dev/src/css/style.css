@@ -18,16 +18,15 @@ body{
    background-size: cover;
 }
 #shelter{
-  position:absolute;
   left: 10%;
   width:100%;
   height:auto ;
 }
 footer{
-    position: absolute;
     bottom:0;
     width: 100%;
     height:auto;
+    position:fixed;
 }
 
 footer.page-footer{
@@ -121,49 +120,49 @@ footer.page-footer{
 }
 
 .choice1{
-    position:absolute;
+    /*position:absolute;*/
     left:0px;
     top:176px;
     width: 10px;
     height: 10px;
 }
 .choice2{
-    position:absolute;
+    /*position:absolute;*/
     left:-85px;
     top:78px;
     width: 10px;
     height: 10px;
 }
 .choice3{
-    position:absolute;
+    /*position:absolute;*/
     left:-23px;
     top:88px;
     width: 10px;
     height: 10px;
 }
 .choice4{
-    position:absolute;
+    /*position:absolute;*/
     left:25px;
     top:150px;
     width: 10px;
     height: 10px;
 }
 .choice5{
-    position:absolute;
+    /*position:absolute;*/
     left:273px;
     top:10px;
     width: 10px;
     height: 10px;
 }
 .choice6{
-    position:absolute;
+    /*position:absolute;*/
     left:318px;
     top:337px;
     width: 10px;
     height: 10px;
 }
 .choice7{
-    position:absolute;
+    /*position:absolute;*/
     left:234px;
     top:-275px;
     width: 10px;
