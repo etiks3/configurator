@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: foundation-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T08:12:32+01:00
+* @Last modified time: 20-02-2017
 * @Copyright: sylvain rojas
 */
 
@@ -16,7 +16,7 @@ export function foundationMenuSkeleton(){
 <div id="dataFoundation" class="menu">
   <div class="card">
   <div class="card-image" id="cardFoundation1">
-    <img id="foundation1" class="valign-wrapper" src="./img/mat/dalle.png">
+    <img id="foundation1" class="valign-wrapper" src="./img/mat/dalle.png" >
     <p>Fondations 1</p>
   </div>
   </div>

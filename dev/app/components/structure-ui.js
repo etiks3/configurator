@@ -2,7 +2,7 @@
 * @Author: sylvain
 * @Date:   2017-02-18T16:30:58+01:00
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T08:11:43+01:00
+* @Last modified time: 20-02-2017
 */
 
 
@@ -11,7 +11,7 @@ export function structureMenuSkeleton(){
 <div id="dataStructure" class="menu">
   <div class="card">
     <div class="card-image" id="cardStructure1">
-      <img id="structure" class="valign-wrapper" src="./img/mat/charpente.png" style="width:100%">
+      <img id="structure" class="valign-wrapper" src="./img/mat/charpente.png" style="width:100%"">
       <p>Structure 1</p>
     </div>
   </div>
