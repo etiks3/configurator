@@ -59,23 +59,6 @@ export class HomePage {
         });
     }
     //A Function to display an item menu on click
-    let color_marker = document.getElementById("color-marker");
-      if(color_marker) {
-        color_marker.addEventListener('click', (e) => {
-            let menu_color = this.shelter.colorDisplay()
-            let color = document.getElementById("color")
-            color.innerHTML = menu_color;
-            //toggle pour l'affichage du menu
-            if (color.style.visibility === 'visible') {
-              color.style.visibility = 'hidden';
-            }
-            else {
-              color.style.visibility = 'visible';
-            }
-            this.shelter.dataColorEvent()
-        });
-    }
-    //A Function to display an item menu on click
     let structure_marker = document.getElementById("structure-marker");
       if(structure_marker) {
         structure_marker.addEventListener('click', (e) => {
@@ -92,6 +75,43 @@ export class HomePage {
             this.shelter.dataStructureEvent()
         });
     }
+    //A Function to display an item menu on click
+    let fabric_marker = document.getElementById("fabric-marker");
+      if(fabric_marker) {
+          fabric_marker.addEventListener('click', (e) => {
+              let menu_fabric = this.shelter.fabricDisplay()
+              let fabric = document.getElementById("fabric")
+              console.log(fabric);
+              fabric.innerHTML = menu_fabric;
+              //toggle pour l'affichage du menu
+              if (fabric.style.visibility === 'visible') {
+                fabric.style.visibility = 'hidden';
+              } else {
+                fabric.style.visibility = 'visible';
+              }
+               this.shelter.dataFabricEvent();
+
+            });
+        }
+
+    //A Function to display an item menu on click
+    let color_marker = document.getElementById("color-marker");
+      if(color_marker) {
+        color_marker.addEventListener('click', (e) => {
+            let menu_color = this.shelter.colorDisplay()
+            let color = document.getElementById("color")
+            color.innerHTML = menu_color;
+            //toggle pour l'affichage du menu
+            if (color.style.visibility === 'visible') {
+              color.style.visibility = 'hidden';
+            }
+            else {
+              color.style.visibility = 'visible';
+            }
+            this.shelter.dataColorEvent()
+        });
+    }
+
     let door_marker = document.getElementById("door-marker");
       if(door_marker) {
         door_marker.addEventListener('click', (e) => {
@@ -140,24 +160,7 @@ export class HomePage {
             this.shelter.dataRoofEvent()
         });
     }
-    //A Function to display an item menu on click
-    let fabric_marker = document.getElementById("fabric-marker");
-      if(fabric_marker) {
-          fabric_marker.addEventListener('click', (e) => {
-              let menu_fabric = this.shelter.fabricDisplay()
-              let fabric = document.getElementById("fabric")
-              console.log(fabric);
-              fabric.innerHTML = menu_fabric;
-              //toggle pour l'affichage du menu
-              if (fabric.style.visibility === 'visible') {
-                fabric.style.visibility = 'hidden';
-              } else {
-                fabric.style.visibility = 'visible';
-              }
-               this.shelter.dataFabricEvent();
 
-            });
-        }
     }
 
 }

@@ -46,68 +46,149 @@ export class Shelter{
         }
 
         //Method to select items
-            dataColorEvent(){
-             document.getElementById('dataColor').addEventListener('click', event=>{
-                 if (event.target.nodeName === "IMG") {
-                    this.displayItem(event);
-                 }
-              });
+        dataFoundEvent(){
+          document.getElementById('dataFoundation').addEventListener('click', event=>{
+           if (event.target.nodeName === "IMG") {
+             this.selectedItem();
+             document.getElementById('structure-marker').style.visibility = "visible";
             }
-            dataFabricEvent(){
-             document.getElementById('dataFabric').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-                }
-              });
+          });
+        }
+        dataStructureEvent(){
+         document.getElementById('dataStructure').addEventListener('click', event=>{
+           if (event.target.nodeName === "IMG") {
+             this.selectedItem();
+             document.getElementById('fabric-marker').style.visibility = "visible";
+           }
+          });
+        }
+        dataFabricEvent(){
+         document.getElementById('dataFabric').addEventListener('click', event=>{
+           if (event.target.nodeName === "IMG") {
+             this.selectedItem();
+             document.getElementById('frontface-marker').style.visibility = "visible";
             }
-            dataRoofEvent(){
-             document.getElementById('dataRoof').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-               }
-              });
-            }
-            dataStructureEvent(){
-             document.getElementById('dataStructure').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-               }
-              });
-            }
-            datafrontfaceEvent(){
-             document.getElementById('dataFrontface').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-               }
-              });
-            }
-            dataFoundEvent(){
-              document.getElementById('dataFoundation').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-                }
-              });
-            }
-            dataDoorEvent(){
-             document.getElementById('dataDoor').addEventListener('click', event=>{
-               if (event.target.nodeName === "IMG") {
-                  this.displayItem(event);
-               }
-              });
-            }
+          });
+        }
+        datafrontfaceEvent(){
+         document.getElementById('dataFrontface').addEventListener('click', event=>{
+           if (event.target.nodeName === "IMG") {
+             this.selectedItem();
+             document.getElementById('color-marker').style.visibility = "visible";
+           }
+          });
+        }
+        dataDoorEvent(){
+         document.getElementById('dataDoor').addEventListener('click', event=>{
+           if (event.target.nodeName === "IMG") {
+             this.selectedItem();
+             document.getElementById('save-btn').style.visibility = "visible";
+             $("#save-btn").fadeIn(2000)
+           }
+          });
+        }
+        dataColorEvent(){
+         document.getElementById('dataColor').addEventListener('click', event=>{
+             if (event.target.nodeName === "IMG") {
+
+               this.selectedItem();
+               document.getElementById('door-marker').style.visibility = "visible";
+
+             }
+          });
+        }
+
         //Method to display the item in the centre of the HomePage
-            displayItem(element){
-              document.getElementById('display').innerHTML = `<img src="${element.target.src}">`;
+            selectedItem(){
+              let selectedIndex= [];
               let choice = event.target.id;
               let key = event.target.parentNode.parentNode.parentNode.id;
                if(choice){
                  this.userSelection[key] = choice;
-                 console.log(this.userSelection);
+                 let i = choice;
+                  selectedIndex.push(i);
+                   console.log(selectedIndex);
                  $('.menu').fadeOut("slow")
-                 let markersList = document.getElementsByClassName('markers')[1];
-                 let markers = this.indexMarker.markersList ++;
-
-
+                this.displayItemB();
+                this.indexOfSelected(selectedIndex)
                }
             }
+
+            indexOfSelected(selectedIndex){
+            }
+
+            reset(){
+              let reset = document.getElementById('reset').addEventListener('click', _=>{
+                  document.getElementById('display').innerHTML = "";
+              })
+            }
+
+
+            displayItemB() {
+              switch(this.userSelection.dataFoundation){
+               case 'foundation1':
+                 document.getElementById('display').innerHTML += `<img src="./img/mat/dalle.png">`;
+                 break;
+               case 'foundation2':
+                 document.getElementById('display').innerHTML += `<img src="./img/mat/pillar.png">`;
+                 break;
+               }
+               switch(this.userSelection.dataStructure){
+                case 'structure1':
+                  document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
+                  break;
+                case 'structure2':
+                  document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
+                  break;
+                }
+               switch(this.userSelection.dataColor){
+                case 'color1':
+                  document.getElementById('display').innerHTML += `<img src="./img/mat/red.png">`;
+                  break;
+                case 'color2':
+                  document.getElementById('display').innerHTML += `<img src="./img/mat/blue.png">`;
+                  break;
+                }
+                switch(this.userSelection.dataDoor){
+                 case 'leftDoor':
+                   document.getElementById('display').innerHTML += `<img src="./img/mat/porte.png">`;
+                   break;
+                 case 'rightDoor':
+                   document.getElementById('display').innerHTML += `<img src="./img/mat/porte.png">`;
+                   break;
+                 }
+                 switch(this.userSelection.dataRoof){
+                  case 'roof2':
+                    document.getElementById('display').innerHTML += `<img src="./img/mat/epdm.png">`;
+                    break;
+                  case 'roof2':
+                    document.getElementById('display').innerHTML += `<img src="./img/mat/epdm.png">`;
+                    break;
+                  }
+                  switch(this.userSelection.dataFrontface){
+                   case 'frontface1':
+                     document.getElementById('display').innerHTML += `<img src="./img/mat/bardage.png">`;
+                     break;
+                   case 'frontface2':
+                     document.getElementById('display').innerHTML += `<img src="./img/mat/bardage.png">`;
+                     break;
+                   }
+                   switch(this.userSelection.dataFabric){
+                    case 'fabric1':
+                      document.getElementById('display').innerHTML += `<img src="./img/mat/osb.png">`;
+                      break;
+                    case 'fabric2':
+                      document.getElementById('display').innerHTML += `<img src="./img/mat/bordure.png">`;
+                      break;
+                    }
+                    switch(this.userSelection.dataStructure){
+                     case 'structure1':
+                       document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
+                       break;
+                     case 'structure2':
+                       document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
+                       break;
+                     }
+            }
+
           }

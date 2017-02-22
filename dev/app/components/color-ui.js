@@ -21,7 +21,7 @@ export function colorMenuSkeleton(){
 </div>
 <div class="card">
   <div class="card-image" id="cardColor2">
-    <img id="Color2" class="valign-wrapper" src="./img/mat/blue.png" style="width:100%">
+    <img id="color2" class="valign-wrapper" src="./img/mat/blue.png" style="width:100%">
     <p>Couleur 2</p>
   </div>
 </div>

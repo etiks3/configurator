@@ -37,37 +37,5 @@ export class FirebaseService{
     });
   }
 
-  read(collection){
-    return this.database.ref(collection);
-    console.log(collection)
-  }
 
-  update(collection, key, datasObject){
-    collection = `${collection}/`;
-    return this.database.ref(collection).child(key).update(datasObject);
-  }
-
-  delete(collection, key){
-    collection = `${collection}/`;
-    return this.database.ref(collection).child(key).remove();
-  }
-
-  googleAuth(){
-    let googleProvider = new firebase.auth.GoogleAuthProvider();
-    return this.auth.signInWithPopup(googleProvider)
-  }
-
-  logOut(){
-    let confirmBox = window.confirm("Realy want to logout??");
-    if (confirmBox != true) {
-      return;
-    }
-    this.auth.signOut().then(() => {
-      // Sign-out successful.
-      console.log('Sign-out successful')
-    }, (error) => {
-      // An error happened.
-      console.log('Sign-out error happened')
-    });
-  }
 }

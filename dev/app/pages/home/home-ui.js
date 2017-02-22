@@ -16,23 +16,37 @@ export function homeSkeleton(){
 
   </header>
   <main>
+  <div id="test"></div>
+  <div id="shelter">
   <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
-    <div class="fixed-action-btn">
+  <a id="reset" class="waves-effect waves-light btn">Effacer</a>
+    <div class="choice1 fixed-action-btn">
       <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="foundations"></div>
+    </div>
+    <div class="choice2 fixed-action-btn">
       <button id="structure-marker" class="marker2 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="structure"></div>
+    </div>
+    <div class="choice3 fixed-action-btn">
       <button id="fabric-marker" class="marker3 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="fabric"></div>
+    </div>
+    <div class="choice4 fixed-action-btn">
       <button id="frontface-marker" class="marker4 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="frontface"></div>
+    </div>
+    <div class="choice5 fixed-action-btn">
       <button id="door-marker" class="marker5 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="door"></div>
+    </div>
+    <div class="choice6 fixed-action-btn">
       <button id="color-marker" class="marker6 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="color"></div>
-      <button id="roof-marker" class="marker7 btn-floating btn-large red"><i class="material-icons">add</i></button>
-      <div id="roof"></div>
     </div>
+
+
+      </div>
       <div id="display" class="valign-wrapper"></div>
   </main>
 
