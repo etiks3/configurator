@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: style.css
 * @Last modified by:   rojas
-* @Last modified time: 20-02-2017
+* @Last modified time: 22-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -171,7 +171,7 @@ footer.page-footer{
 
 
 /*================== MENUS ====================*/
-#dataFoundation{
+#Fondations{
   position: absolute;
   left: 120px;
   top:188px;

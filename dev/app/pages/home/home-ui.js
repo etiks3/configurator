@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home-ui.js
-* @Last modified by:   rojas
-* @Last modified time: 20-02-2017
+@Last modified by:   rojas
+@Last modified time: 22-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -16,7 +16,9 @@ export function homeSkeleton(){
 
   </header>
   <main>
-  <div id="test"></div>
+  <table id="test">
+
+  </table>
   <div id="shelter">
   <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
   <a id="reset" class="waves-effect waves-light btn">Effacer</a>

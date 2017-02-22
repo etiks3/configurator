@@ -47,7 +47,7 @@ export class Shelter{
 
         //Method to select items
         dataFoundEvent(){
-          document.getElementById('dataFoundation').addEventListener('click', event=>{
+          document.getElementById('Fondations').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
              this.selectedItem();
              document.getElementById('structure-marker').style.visibility = "visible";
@@ -103,14 +103,19 @@ export class Shelter{
               let key = event.target.parentNode.parentNode.parentNode.id;
                if(choice){
                  this.userSelection[key] = choice;
+                 let keys = Object.values(this.userSelection);
+                 console.log(keys);
+                 document.getElementById('test').innerHTML =
+                 `<p>Votre selection:</p>
+                 </br>
+                 ${keys.join("</br>")}
+                 `
                  $('.menu').fadeOut("slow")
                 this.displayItemB();
-                this.indexOfSelected(choice)
-               }
+
+              }
             }
-            indexOfSelected(choice){
-              console.log(choice);
-            }
+
 
             reset(){
               let reset = document.getElementById('reset').addEventListener('click', _=>{
@@ -120,7 +125,7 @@ export class Shelter{
 
 
             displayItemB() {
-              switch(this.userSelection.dataFoundation){
+              switch(this.userSelection.Fondations){
                case 'foundation1':
                  document.getElementById('display').innerHTML += `<img src="./img/mat/dalle.png">`;
                  break;
@@ -128,14 +133,6 @@ export class Shelter{
                  document.getElementById('display').innerHTML += `<img src="./img/mat/pillar.png">`;
                  break;
                }
-               switch(this.userSelection.dataStructure){
-                case 'structure1':
-                  document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
-                  break;
-                case 'structure2':
-                  document.getElementById('display').innerHTML += `<img src="./img/mat/charpente.png">`;
-                  break;
-                }
                switch(this.userSelection.dataColor){
                 case 'color1':
                   document.getElementById('display').innerHTML += `<img src="./img/mat/red.png">`;
@@ -173,7 +170,7 @@ export class Shelter{
                       document.getElementById('display').innerHTML += `<img src="./img/mat/osb.png">`;
                       break;
                     case 'fabric2':
-                      document.getElementById('display').innerHTML += `<img src="./img/mat/bordure.png">`;
+                      document.getElementById('display').innerHTML += `<img src="./img/mat/osb-right.png">`;
                       break;
                     }
                     switch(this.userSelection.dataStructure){
