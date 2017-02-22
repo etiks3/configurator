@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: menu-fabric-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T08:11:12+01:00
+* @Last modified time: 22-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -19,7 +19,7 @@ export function fabricMenuSkeleton(){
           <p>Materiaux 1</p>
       </div>
       <div class="card-image" id="cardFabric1">
-          <img id="fabric2" data-id="OSB" class="valign-wrapper" src="./img/mat/osb.png" style="width:100%">
+          <img id="fabric2" data-id="OSB" class="valign-wrapper" src="./img/mat/osb-left.png" style="width:100%">
           <p>Materiaux 1</p>
       </div>
     </div>

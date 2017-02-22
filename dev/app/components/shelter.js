@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 20-02-2017
+* @Last modified time: 22-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -90,7 +90,6 @@ export class Shelter{
         dataColorEvent(){
          document.getElementById('dataColor').addEventListener('click', event=>{
              if (event.target.nodeName === "IMG") {
-
                this.selectedItem();
                document.getElementById('door-marker').style.visibility = "visible";
 
@@ -100,21 +99,17 @@ export class Shelter{
 
         //Method to display the item in the centre of the HomePage
             selectedItem(){
-              let selectedIndex= [];
               let choice = event.target.id;
               let key = event.target.parentNode.parentNode.parentNode.id;
                if(choice){
                  this.userSelection[key] = choice;
-                 let i = choice;
-                  selectedIndex.push(i);
-                   console.log(selectedIndex);
                  $('.menu').fadeOut("slow")
                 this.displayItemB();
-                this.indexOfSelected(selectedIndex)
+                this.indexOfSelected(choice)
                }
             }
-
-            indexOfSelected(selectedIndex){
+            indexOfSelected(choice){
+              console.log(choice);
             }
 
             reset(){
