@@ -8,15 +8,15 @@
 
 export function frontfaceMenuSkeleton(){
   return `
-<div id="dataFrontface" class="menu">
+<div id="Facade" class="menu">
   <div class="card">
-    <div class="card-image" id="cardFrontface1">
+    <div class="card-image" id="cardFrontface1" data-id="Bardage pré-grisé">
       <img id="frontface1" class="valign-wrapper" src="./img/mat/bardage.png" style="width:100%">
       <p>Facade 1</p>
     </div>
   </div>
   <div class="card">
-    <div class="card-image" id="cardFrontface2">
+    <div class="card-image" id="cardFrontface2" data-id="Bardage couleur naturel">
       <img id="frontface2" class="valign-wrapper" src="./img/mat/bardage.png" style="width:100%">
       <p>Facade 2</p>
     </div>

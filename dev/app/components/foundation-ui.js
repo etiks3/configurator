@@ -15,14 +15,14 @@ export function foundationMenuSkeleton(){
   return `
 <div id="Fondations" class="menu">
   <div id="dalle" data-id="Dalle en béton" class="card">
-  <div class="card-image" id="cardFoundation1">
+  <div class="card-image" id="cardFoundation1" data-id="Dalle en béton">
     <img id="foundation1" class="valign-wrapper" src="./img/mat/dalle.png" >
     <p>Fondations 1</p>
   </div>
   </div>
   <div id="pieds" data-id="Pieds en Inox" class="card">
-  <div class="card-image" id="cardFoundation2">
-    <img id="foundation2" class="valign-wrapper" src="./img/mat/pieds.png">
+  <div class="card-image" id="cardFoundation2" data-id="Pieds en Inox">
+    <img id="foundation2" class="valign-wrapper" src="./img/mat/pillar.png">
     <p>Fondations 2</p>
   </div>
   </div>

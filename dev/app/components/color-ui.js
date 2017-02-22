@@ -12,15 +12,15 @@
 
 export function colorMenuSkeleton(){
   return `
-<div id="dataColor" class="menu">
+<div id="Couleur" class="menu">
   <div class="card">
-  <div class="card-image" id="cardColor1">
+  <div class="card-image" id="cardColor1" data-id="bois pré-grisé">
     <img id="color1" class="valign-wrapper" src="./img/mat/red.png" style="width:100%">
     <p>Couleur 1</p>
   </div>
 </div>
 <div class="card">
-  <div class="card-image" id="cardColor2">
+  <div class="card-image" id="cardColor2" data-id="bois naturel">
     <img id="color2" class="valign-wrapper" src="./img/mat/blue.png" style="width:100%">
     <p>Couleur 2</p>
   </div>

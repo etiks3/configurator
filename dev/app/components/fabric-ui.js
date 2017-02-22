@@ -12,14 +12,14 @@
 
 export function fabricMenuSkeleton(){
   return`
-  <div id="dataFabric" class="menu">
+  <div id="Isolation" class="menu">
     <div class="card">
-      <div class="card-image" id="cardFabric1">
+      <div class="card-image" id="cardFabric1" data-id="OSB avec porte à gauche">
           <img id="fabric1" data-id="OSB" class="valign-wrapper" src="./img/mat/osb.png" style="width:100%">
           <p>Materiaux 1</p>
       </div>
-      <div class="card-image" id="cardFabric1">
-          <img id="fabric2" data-id="OSB" class="valign-wrapper" src="./img/mat/osb-left.png" style="width:100%">
+      <div class="card-image" id="cardFabric1" data-id="OSB avec porte à droite" >
+          <img id="fabric2" data-id="OSB" class="valign-wrapper" src="./img/mat/osb-right.png" style="width:100%">
           <p>Materiaux 1</p>
       </div>
     </div>

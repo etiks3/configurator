@@ -12,37 +12,32 @@
 
 export function homeSkeleton(){
   return `
-  <header>
-
-  </header>
+  <header></header>
   <main>
-  <table id="test">
-
-  </table>
   <div id="shelter">
   <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
   <a id="reset" class="waves-effect waves-light btn">Effacer</a>
-    <div class="choice1 fixed-action-btn">
+    <div class="choice1 ">
       <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="foundations"></div>
     </div>
-    <div class="choice2 fixed-action-btn">
+    <div class="choice2 ">
       <button id="structure-marker" class="marker2 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="structure"></div>
     </div>
-    <div class="choice3 fixed-action-btn">
+    <div class="choice3 ">
       <button id="fabric-marker" class="marker3 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="fabric"></div>
     </div>
-    <div class="choice4 fixed-action-btn">
+    <div class="choice4 ">
       <button id="frontface-marker" class="marker4 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="frontface"></div>
     </div>
-    <div class="choice5 fixed-action-btn">
+    <div class="choice5 ">
       <button id="door-marker" class="marker5 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="door"></div>
     </div>
-    <div class="choice6 fixed-action-btn">
+    <div class="choice6 ">
       <button id="color-marker" class="marker6 btn-floating btn-large red"><i class="material-icons">add</i></button>
       <div id="color"></div>
     </div>
@@ -50,6 +45,7 @@ export function homeSkeleton(){
 
       </div>
       <div id="display" class="valign-wrapper"></div>
+      <p>Votre selection:</p><div id="selectionUser"></div>
   </main>
 
   <footer class="page-footer">

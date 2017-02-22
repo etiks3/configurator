@@ -81,7 +81,6 @@ export class HomePage {
           fabric_marker.addEventListener('click', (e) => {
               let menu_fabric = this.shelter.fabricDisplay()
               let fabric = document.getElementById("fabric")
-              console.log(fabric);
               fabric.innerHTML = menu_fabric;
               //toggle pour l'affichage du menu
               if (fabric.style.visibility === 'visible') {

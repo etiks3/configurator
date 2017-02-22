@@ -8,15 +8,15 @@
 
 export function doorMenuSkeleton(){
   return `
-<div id="dataDoor" class="menu">
+<div id="Porte" class="menu">
   <div class="card">
-    <div class="card-image" id="cardLeftDoor">
+    <div class="card-image" id="cardLeftDoor" data-id="Porte coulissante gauche">
       <img id="leftDoor" class="valign-wrapper" src="./img/mat/porte.png" style="width:100%">
       <p>Porte gauche</p>
     </div>
   </div>
   <div class="card">
-    <div class="card-image" id="cardRightDoor">
+    <div class="card-image" id="cardRightDoor" data-id="Porte coulissante droite">
       <img id="rightDoor" class="valign-wrapper"src="./img/mat/porte.png" style="width:100%">
       <p>Porte droite</p>
     </div>
