@@ -9,7 +9,7 @@
 export function structureMenuSkeleton(){
   return `
 <div id="Structure" class="menu">
-  <div class="card">
+  <div class="card">  
     <div class="card-image" id="cardStructure1" data-id="Charpente en bois">
       <img id="structure" class="valign-wrapper" src="./img/mat/charpente.png" style="width:100%">
       <p>Structure 1</p>
