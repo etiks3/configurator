@@ -20,12 +20,16 @@ body{
    background-size: cover;
 }
 h1{
-  font-size:20px;
+    font-size:20px;
 }
 #shelter{
-  margin:0 auto;
-  height:auto ;
-  left:3%;
+    margin:0 auto;
+    height:auto ;
+    left:3%;
+}
+nav{
+    height: 75px;
+    background-color: #E5E5E5;
 }
 footer{
     bottom:0;
@@ -55,21 +59,21 @@ footer.page-footer{
 }
 #reset{
     background-color: #6BAD4A;
-    top: 6%;
+    top: 80%;
     right: 3%;
     position: absolute;
 }
 #save-btn{
     background-color: #6BAD4A;
-    top: 70%;
+    top: 2%;
     right: 3%;
     position: fixed;
     display:none;
 }
 
 table{
-  width: 100%;
-  display: table;
+    width: 100%;
+    display: table;
 }
 
 /*================== MARKERS ====================*/
@@ -77,17 +81,16 @@ table{
     line-height: 40px;
 }
 .btn-floating.btn-large{
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 .marker1.btn-floating.btn-large{
-  top: 183px;
-  right: 35px;
-
+    top: 183px;
+    right: 35px;
 }
 .marker2.btn-floating.btn-large{
-  top: 183px;
-  right: 35px;
+    top: 183px;
+    right: 35px;
     visibility: hidden;
 }
 .marker3.btn-floating.btn-large{
@@ -123,16 +126,16 @@ table{
     top: 54%;
     }
 .choice2{
-  position: absolute;
-  width: 147px;
-  left: 5%;
-  top: 313px;
+    position: absolute;
+    width: 147px;
+    left: 5%;
+    top: 313px;
 }
 .choice3{
-  position: absolute;
-  width: 147px;
-  left: 200px;
-  top: 150px;
+    position: absolute;
+    width: 147px;
+    left: 200px;
+    top: 150px;
 }
 #card3{
     left: 156px;
@@ -152,7 +155,7 @@ table{
     position: absolute;
     width: 147px;
     right: 250px;
-    top: 400px;
+    top: 548px;
 }
 .choice6{
     position: absolute;
