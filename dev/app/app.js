@@ -20,7 +20,6 @@ import { HomePage } from './pages/home/home';
     //Initialize Firebase
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
-    console.log('helleo');
   }
   start(){
     firebase.auth().onAuthStateChanged((user) =>{
@@ -32,13 +31,11 @@ import { HomePage } from './pages/home/home';
           email: user.email,
           uid: user.uid
         }
-      let homePage = new HomePage(this.appBody);
       }
+        let homePage = new HomePage(this.appBody);
     });
   }
 }
 
 let myApp = new MyApp();
 myApp.start();
-
-console.log('heloo');

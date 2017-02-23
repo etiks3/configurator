@@ -12,14 +12,21 @@
 
 export function homeSkeleton(){
   return `
-
+<!-- HEADER -->
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+        </ul>
+      </div>
+    </nav>
+    
 <!-- MAIN  -->
 
   <section id="shelter">
-  <section>
-          <a id="googleBtn" class="waves-effect waves-light btn">Se connecter avec Google</a>
-            <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
-              <a id="reset" class="waves-effect waves-light btn">Effacer</a>
+          <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
+            <a id="reset" class="waves-effect waves-light btn">Effacer</a>
         <div class="choice1 ">
           <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
           <div id="foundations"></div>

@@ -13,7 +13,6 @@
 import { FirebaseService } from '../../providers/firebase/firebase-service';
 import { homeSkeleton } from './home-ui'
 import { Shelter } from '../../components/shelter';
-import { userData } from '../../components/userdata';
 
 export class HomePage {
 
@@ -23,12 +22,7 @@ export class HomePage {
     this.initUI();
     this.loadEventUI();
     this.fbService = new FirebaseService();
-    this.userDataDisplay()
-  }
-
-  userDataDisplay(){
-    return userData();
-  }
+}
 //HomePage Initialization
   initUI(){
     // remove all section before display UI
@@ -162,8 +156,10 @@ export class HomePage {
       }
        document.getElementById('save-btn').addEventListener('click', _=>{
         this.saveData();
+        this.googleAuth(event), false;
       });
     }
+
     saveData(){
       let uID = this.userID || '';
       this.fbService.create(`toto/${uID}`, this.shelter.userSelection).then(
@@ -174,9 +170,9 @@ export class HomePage {
         err => console.log(err)
       )
     }
+
     googleAuth(event){
     event.preventDefault();
-    console.log('google auth')
     this.fbService.googleAuth()
     .then((result) => {
       // This gives you a Google Access Token.
@@ -186,6 +182,6 @@ export class HomePage {
       let user = result.user;
       console.log('signed-in user info-> ', user)
       // ...
-})
-}
+    })
+  }
 }

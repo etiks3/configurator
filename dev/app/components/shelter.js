@@ -84,22 +84,14 @@ export class Shelter{
         }
         //Method to select door items
         dataDoorEvent(){
-          console.log('coucou1', document.getElementById('Porte'));
          if(document.getElementById('Porte')){
-           console.log('coucou2', document.getElementById('Porte'), event);
            document.getElementById('Porte').addEventListener('click', event=>{
-             console.log('coucou3', document.getElementById('Porte'), event);
              if (event.target.nodeName === "IMG") {
-               console.log('coucou4', document.getElementById('Porte'), event.target.nodeName);
                this.selectedItem();
-               //document.getElementById('save-btn').style.visibility = "visible";
-               //$("#save-btn").fadeIn(2000)
-
-             }
+              }
             });
          }
-
-        }
+       }
         //Method to select color items
         dataColorEvent(){
          document.getElementById('Couleur').addEventListener('click', event=>{
@@ -116,7 +108,6 @@ export class Shelter{
               let description = event.target.parentNode.getAttribute("data-id");
                if(choice){
                  this.userSelection[key] = {'select':choice,'descr':description};
-                  console.log(this.userSelection);
                  let affichage = "";
                 for (key in this.userSelection){
                   affichage += `<tr><td>${key}</td><td>${this.userSelection[key].descr}</td></tr>`;

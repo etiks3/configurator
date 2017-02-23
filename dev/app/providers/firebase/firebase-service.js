@@ -44,18 +44,18 @@ export class FirebaseService{
       return this.auth.signInWithPopup(googleProvider)
     }
 
-    logOut(){
-      let confirmBox = window.confirm("Realy want to logout??");
-      if (confirmBox != true) {
-        return;
-      }
-      this.auth.signOut().then(() => {
-        // Sign-out successful.
-        console.log('Sign-out successful')
-      }, (error) => {
-        // An error happened.
-        console.log('Sign-out error happened')
-      });
-  }
+  //   logOut(){
+  //     let confirmBox = window.confirm("Realy want to logout??");
+  //     if (confirmBox != true) {
+  //       return;
+  //     }
+  //     this.auth.signOut().then(() => {
+  //       // Sign-out successful.
+  //       console.log('Sign-out successful')
+  //     }, (error) => {
+  //       // An error happened.
+  //       console.log('Sign-out error happened')
+  //     });
+  // }
 
 }
