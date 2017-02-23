@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 20-02-2017
+* @Last modified time: 23-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -48,7 +48,7 @@ export class HomePage {
             let menu_foundation = this.shelter.foundationDisplay()
             let foundation = document.getElementById("foundations")
             foundation.innerHTML = menu_foundation;
-            //toggle pour l'affichage du menu
+            // toggle pour l'affichage du menu
             if (foundation.style.visibility === 'hidden') {
               foundation.style.visibility = 'visible';
             }

@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: foundation-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 22-02-2017
+* @Last modified time: 23-02-2017
 * @Copyright: sylvain rojas
 */
 

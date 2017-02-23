@@ -2,7 +2,7 @@
 * @Author: sylvain
 * @Date:   2017-02-18T16:31:21+01:00
 * @Last modified by:   rojas
-* @Last modified time: 2017-02-19T08:11:28+01:00
+* @Last modified time: 23-02-2017
 */
 
 
@@ -15,7 +15,7 @@ export function frontfaceMenuSkeleton(){
       <p>Facade 1</p>
     </div>
   </div>
-  <div class="card">
+  <div id="card4" class="card">
     <div class="card-image" id="cardFrontface2" data-id="Bardage couleur naturel">
       <img id="frontface2" class="valign-wrapper" src="./img/mat/bardage.png" style="width:100%">
       <p>Facade 2</p>

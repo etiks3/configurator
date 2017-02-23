@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 22-02-2017
+* @Last modified time: 23-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -87,6 +87,7 @@ export class Shelter{
              this.selectedItem();
              document.getElementById('save-btn').style.visibility = "visible";
              $("#save-btn").fadeIn(2000)
+
            }
           });
         }
@@ -113,6 +114,7 @@ export class Shelter{
                  let keys = Object.values(this.userSelection);
                  document.getElementById('selectionUser').innerHTML =
                  `
+                 <h1>Votre Selection</h1>
                  <table class="responsive-table">
                  <thead>
                      <tr>
