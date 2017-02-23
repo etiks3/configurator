@@ -55,8 +55,9 @@ footer.page-footer{
 }
 #reset{
     background-color: #6BAD4A;
-    top: 1%;
+    top: 6%;
     right: 3%;
+    position: absolute;
 }
 #save-btn{
     background-color: #6BAD4A;
@@ -166,28 +167,6 @@ table{
 }
 
 
-/*================== MENUS ====================*/
-/*#Fondations{
-  width:147px
-}
-#Structure{
-  width: 147px;
-}
-#Isolation{
-    width: 147px;
-}
-#Facade{
-    width: 147px;
-}
-#Couleur{
-    width: 147px;
-}
-#Porte{
-    width: 147px;
-}
-#Toit{
-    width: 147px;
-}*/
 
 /*================== BUTTONS ====================*/
 

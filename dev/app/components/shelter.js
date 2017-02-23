@@ -77,19 +77,28 @@ export class Shelter{
            if (event.target.nodeName === "IMG") {
              this.selectedItem();
             document.getElementById('door-marker').style.visibility = "visible";
+            // test
+            $("#save-btn").fadeIn(2000)
            }
           });
         }
         //Method to select door items
         dataDoorEvent(){
-         document.getElementById('Porte').addEventListener('click', event=>{
-           if (event.target.nodeName === "IMG") {
-             this.selectedItem();
-             document.getElementById('save-btn').style.visibility = "visible";
-             $("#save-btn").fadeIn(2000)
+          console.log('coucou1', document.getElementById('Porte'));
+         if(document.getElementById('Porte')){
+           console.log('coucou2', document.getElementById('Porte'), event);
+           document.getElementById('Porte').addEventListener('click', event=>{
+             console.log('coucou3', document.getElementById('Porte'), event);
+             if (event.target.nodeName === "IMG") {
+               console.log('coucou4', document.getElementById('Porte'), event.target.nodeName);
+               this.selectedItem();
+               //document.getElementById('save-btn').style.visibility = "visible";
+               //$("#save-btn").fadeIn(2000)
 
-           }
-          });
+             }
+            });
+         }
+
         }
         //Method to select color items
         dataColorEvent(){
@@ -107,6 +116,7 @@ export class Shelter{
               let description = event.target.parentNode.getAttribute("data-id");
                if(choice){
                  this.userSelection[key] = {'select':choice,'descr':description};
+                  console.log(this.userSelection);
                  let affichage = "";
                 for (key in this.userSelection){
                   affichage += `<tr><td>${key}</td><td>${this.userSelection[key].descr}</td></tr>`;
@@ -168,7 +178,7 @@ export class Shelter{
               if(this.userSelection.Facade){
                 switch(this.userSelection.Facade.select){
                    case 'frontface1':
-                     document.getElementById('display').innerHTML += `<img src="./img/mat/bardage.png">`;
+                     document.getElementById('display').innerHTML += `<img src="./img/mat/bardage-pregrise.png">`;
                      break;
                    case 'frontface2':
                      document.getElementById('display').innerHTML += `<img src="./img/mat/bardage.png">`;

@@ -37,6 +37,7 @@ export class HomePage {
     }
     // create page skeleton
     let pageSkeleton = homeSkeleton();
+
     // add page skeleton in body
     this.appBody.insertAdjacentHTML( 'afterbegin', pageSkeleton)
   }
@@ -158,8 +159,33 @@ export class HomePage {
             }
             this.shelter.dataRoofEvent()
         });
+      }
+       document.getElementById('save-btn').addEventListener('click', _=>{
+        this.saveData();
+      });
     }
-
+    saveData(){
+      let uID = this.userID || '';
+      this.fbService.create(`toto/${uID}`, this.shelter.userSelection).then(
+        (response)=>{
+          console.log(response);
+        }
+      ).catch(
+        err => console.log(err)
+      )
     }
-
+    googleAuth(event){
+    event.preventDefault();
+    console.log('google auth')
+    this.fbService.googleAuth()
+    .then((result) => {
+      // This gives you a Google Access Token.
+      // You can use it to access the Google API.
+      let token = result.credential.accessToken;
+      // The signed-in user info.
+      let user = result.user;
+      console.log('signed-in user info-> ', user)
+      // ...
+})
+}
 }

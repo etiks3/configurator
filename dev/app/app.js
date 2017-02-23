@@ -12,8 +12,7 @@
 
 import * as firebase from "firebase";
 import { config } from './providers/firebase/config';
-
- import { HomePage } from './pages/home/home';
+import { HomePage } from './pages/home/home';
 
  class MyApp {
 
@@ -21,11 +20,25 @@ import { config } from './providers/firebase/config';
     //Initialize Firebase
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
+    console.log('helleo');
   }
-
   start(){
-     let homePage = new HomePage(this.appBody);
+    firebase.auth().onAuthStateChanged((user) =>{
+      if (user) {
+        // User is signed in.
+        console.log('User IS log-> ', user)
+        let userDataReady = {
+          name: user.displayName,
+          email: user.email,
+          uid: user.uid
+        }
+      let homePage = new HomePage(this.appBody);
+      }
+    });
   }
 }
-  let myApp = new MyApp();
-    myApp.start();
+
+let myApp = new MyApp();
+myApp.start();
+
+console.log('heloo');

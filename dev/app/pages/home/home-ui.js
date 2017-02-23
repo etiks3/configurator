@@ -16,8 +16,10 @@ export function homeSkeleton(){
 <!-- MAIN  -->
 
   <section id="shelter">
-    <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
-      <a id="reset" class="waves-effect waves-light btn">Effacer</a>
+  <section>
+          <a id="googleBtn" class="waves-effect waves-light btn">Se connecter avec Google</a>
+            <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
+              <a id="reset" class="waves-effect waves-light btn">Effacer</a>
         <div class="choice1 ">
           <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
           <div id="foundations"></div>

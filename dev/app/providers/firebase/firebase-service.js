@@ -12,14 +12,16 @@
 
 
 import * as firebase from "firebase";
-// import { userSelection } from "../components/shelter"
+
 
 export class FirebaseService{
 
   constructor(){
     this.database = firebase.database();
     this.auth = firebase.auth();
+    this.storage = firebase.storage();
     console.log('firebase ready-> ', this.database);
+    console.log('firebase ready->', this.storage);
   }
 
   create(collection, userSelection) {
@@ -27,7 +29,7 @@ export class FirebaseService{
     collection = `${collection}/`;
 
     return new Promise((resolve, reject) => {
-        let created = this.database.ref(collection).push(userSelction);
+        let created = this.database.ref(collection).push(userSelection);
         if(created) {
             resolve(created);
         }
@@ -37,5 +39,23 @@ export class FirebaseService{
     });
   }
 
+    googleAuth(){
+      let googleProvider = new firebase.auth.GoogleAuthProvider();
+      return this.auth.signInWithPopup(googleProvider)
+    }
+
+    logOut(){
+      let confirmBox = window.confirm("Realy want to logout??");
+      if (confirmBox != true) {
+        return;
+      }
+      this.auth.signOut().then(() => {
+        // Sign-out successful.
+        console.log('Sign-out successful')
+      }, (error) => {
+        // An error happened.
+        console.log('Sign-out error happened')
+      });
+  }
 
 }

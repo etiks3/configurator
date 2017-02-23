@@ -11,7 +11,7 @@ export function frontfaceMenuSkeleton(){
 <div id="Facade" class="menu">
   <div class="card">
     <div class="card-image" id="cardFrontface1" data-id="Bardage pré-grisé">
-      <img id="frontface1" class="valign-wrapper" src="./img/mat/bardage.png" style="width:100%">
+      <img id="frontface1" class="valign-wrapper" src="./img/mat/bardage-pregrise.png" style="width:100%">
       <p>Facade 1</p>
     </div>
   </div>

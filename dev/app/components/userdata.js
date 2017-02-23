@@ -13,8 +13,5 @@
 
 export function userData() {
 
-  let saveButton = document.getElementById("save-btn").addEventListener('click', _=>{
-    alert('ici un formulaire de login');
 
-  });
 }
