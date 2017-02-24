@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: app.js
-* @Last modified by:   rojas
-* @Last modified time: 24-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-02-24T13:06:32+01:00
 * @Copyright: S.Rojas
 */
 
@@ -36,7 +36,7 @@ import { HomePage } from './pages/home/home';
         }
       }
       else{
-        alert('vous n etes pas connecte')
+        // alert('vous n etes pas connecte')
       }
     });
   }
