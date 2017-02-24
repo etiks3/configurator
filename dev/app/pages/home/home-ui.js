@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 23-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -54,15 +54,19 @@ export function homeSkeleton(){
             </g>
       </svg>
       </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div id="welcome"></div>
         <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
-        </ul>
       </div>
     </nav>
 
-<!-- MAIN  -->
 
+<!-- MAIN  -->
   <section id="shelter">
+          <div id="userInfo"></div>
+          <div id="start">
+          Pour configurer votre abris,<br/>
+          veuillez appuyer sur le marqueur vert en bas à gauche de l'écran
+          </div>
             <div class="choice1 ">
                   <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
                 <div id="foundations"></div>

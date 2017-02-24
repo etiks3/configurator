@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: foundation-ui.js
 * @Last modified by:   rojas
-* @Last modified time: 23-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: sylvain rojas
 */
 
@@ -17,13 +17,13 @@ export function foundationMenuSkeleton(){
   <div id="dalle" data-id="Dalle en béton" class="card">
   <div class="card-image" id="cardFoundation1" data-id="Dalle en béton">
     <img id="foundation1" class="valign-wrapper" src="./img/mat/dalle.png" >
-    <p>Fondations 1</p>
+    <p>Dalle Béton</p>
   </div>
   </div>
   <div id="pieds" data-id="Pieds en Inox" class="card">
-  <div class="card-image" id="cardFoundation2" data-id="Pieds en Inox">
+  <div class="card-image" id="cardFoundation2" data-id="Pilliers en béton">
     <img id="foundation2" class="valign-wrapper" src="./img/mat/pillar.png">
-    <p>Fondations 2</p>
+    <p>Pilliers béton</p>
   </div>
   </div>
 </div>

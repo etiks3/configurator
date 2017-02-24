@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: style.css
 * @Last modified by:   rojas
-* @Last modified time: 23-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -22,10 +22,28 @@ body{
 h1{
     font-size:20px;
 }
+p{
+    margin:0px;
+}
+#welcome{
+    width: 300px;
+    margin-left: 74%;
+    color: #6BAD4A;
+    padding-top: 12px;
+    font-size: 1.2em;
+}
 #shelter{
     margin:0 auto;
     height:auto ;
     left:3%;
+}
+#start{
+    width: 284px;
+    text-align: center;
+    position: absolute;
+    left: 42%;
+    margin-top: 39%;
+    font-size: 1.5em;
 }
 nav{
     height: 75px;
@@ -75,6 +93,9 @@ table{
     width: 100%;
     display: table;
 }
+#start{
+  visibility:visible;
+}
 
 /*================== MARKERS ====================*/
 .btn-floating.btn-large i{
@@ -114,8 +135,6 @@ table{
     visibility: hidden;
 }
 .marker7.btn-floating.btn-large{
-    /*left:900px;
-    top: 500px;*/
     visibility: hidden;
 }
 
@@ -139,7 +158,7 @@ table{
 }
 #card3{
     left: 156px;
-    bottom: 162px;
+    bottom: 147px;
 }
 .choice4{
     position:absolute;
@@ -149,7 +168,7 @@ table{
 }
 #card4{
     left: 156px;
-    bottom: 162px;
+    bottom: 147px;
 }
 .choice5{
     position: absolute;

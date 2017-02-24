@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: firebase-service.js
 * @Last modified by:   rojas
-* @Last modified time: 20-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: sylvain rojas
 */
 
@@ -23,11 +23,10 @@ export class FirebaseService{
     console.log('firebase ready-> ', this.database);
     console.log('firebase ready->', this.storage);
   }
-
+//Firebase CRUD Process
   create(collection, userSelection) {
     // define firebase collection with correct style
     collection = `${collection}/`;
-
     return new Promise((resolve, reject) => {
         let created = this.database.ref(collection).push(userSelection);
         if(created) {
@@ -38,24 +37,36 @@ export class FirebaseService{
         }
     });
   }
+  read(collection){
+    return this.database.ref(collection);
+  }
 
+  update(collection, key, userSelection){
+    collection = `${collection}/`;
+    return this.database.ref(collection).child(key).update(userSelection);
+  }
+
+  delete(collection, key){
+    collection = `${collection}/`;
+    return this.database.ref(collection).child(key).remove();
+  }
+//Method to display Google Pop-up
     googleAuth(){
       let googleProvider = new firebase.auth.GoogleAuthProvider();
       return this.auth.signInWithPopup(googleProvider)
     }
-
-  //   logOut(){
-  //     let confirmBox = window.confirm("Realy want to logout??");
-  //     if (confirmBox != true) {
-  //       return;
-  //     }
-  //     this.auth.signOut().then(() => {
-  //       // Sign-out successful.
-  //       console.log('Sign-out successful')
-  //     }, (error) => {
-  //       // An error happened.
-  //       console.log('Sign-out error happened')
-  //     });
-  // }
-
+// Method to logout
+    logOut(){
+   let confirmBox = window.confirm("Realy want to logout??");
+   if (confirmBox != true) {
+     return;
+   }
+   this.auth.signOut().then(() => {
+     // Sign-out successful.
+     console.log('Sign-out successful')
+   }, (error) => {
+     // An error happened.
+     console.log('Sign-out error happened')
+   });
+ }
 }

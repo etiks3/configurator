@@ -4,11 +4,9 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 23-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: S.Rojas
 */
-
-
 
 import { FirebaseService } from '../../providers/firebase/firebase-service';
 import { homeSkeleton } from './home-ui'
@@ -22,7 +20,8 @@ export class HomePage {
     this.initUI();
     this.loadEventUI();
     this.fbService = new FirebaseService();
-}
+    }
+
 //HomePage Initialization
   initUI(){
     // remove all section before display UI
@@ -31,25 +30,19 @@ export class HomePage {
     }
     // create page skeleton
     let pageSkeleton = homeSkeleton();
-
     // add page skeleton in body
     this.appBody.insertAdjacentHTML( 'afterbegin', pageSkeleton)
   }
+
 //Event Method Group
   loadEventUI() {
     let foundation_marker = document.getElementById("foundation-marker")
       if(foundation_marker) {
         foundation_marker.addEventListener('click', (e) => {
+          document.getElementById('start').style.visibility= "hidden";
             let menu_foundation = this.shelter.foundationDisplay()
             let foundation = document.getElementById("foundations")
             foundation.innerHTML = menu_foundation;
-            // toggle pour l'affichage du menu
-            if (foundation.style.visibility === 'hidden') {
-              foundation.style.visibility = 'visible';
-            }
-            else {
-              foundation.style.visibility = 'hidden';
-            }
             this.shelter.dataFoundEvent()
         });
     }
@@ -84,7 +77,6 @@ export class HomePage {
                 fabric.style.visibility = 'visible';
               }
                this.shelter.dataFabricEvent();
-
             });
         }
 
@@ -160,28 +152,37 @@ export class HomePage {
       });
     }
 
-    saveData(){
-      let uID = this.userID || '';
+//Mtehod to save all projects data in Firebase and link user to database
+    saveData(event){
+      let uID = this.uid || '';
       this.fbService.create(`toto/${uID}`, this.shelter.userSelection).then(
         (response)=>{
           console.log(response);
         }
       ).catch(
-        err => console.log(err)
+        // err => console.log(err)
       )
     }
 
+//Method to authenticate through Google
     googleAuth(event){
     event.preventDefault();
     this.fbService.googleAuth()
     .then((result) => {
-      // This gives you a Google Access Token.
-      // You can use it to access the Google API.
       let token = result.credential.accessToken;
-      // The signed-in user info.
-      let user = result.user;
+      // The signed-in useruID info.
+      let user = result.user.uid;
+      // The signed-in user display name
+      let userName = result.user.displayName;
+      console.log(userName);
       console.log('signed-in user info-> ', user)
-      // ...
-    })
+      document.getElementById('welcome').innerHTML = `
+      <p>Bonjour ${userName}</p><br/>
+      `
+      document.getElementById('selectionUser').innerHTML = `
+      <tbody>
+        <p>Merci, votre projet a bien été enregistré</p>
+        </tbody>`
+    });
   }
 }

@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: shelter.js
 * @Last modified by:   rojas
-* @Last modified time: 23-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -44,7 +44,7 @@ export class Shelter{
           return foundationMenuSkeleton();
         }
 
-        //Method to select foundations items
+      //Method to select foundations items
         dataFoundEvent(){
           document.getElementById('Fondations').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
@@ -53,7 +53,7 @@ export class Shelter{
             }
           });
         }
-        //Method to select strcuture items
+      //Method to select strcuture items
         dataStructureEvent(){
          document.getElementById('Structure').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
@@ -62,7 +62,7 @@ export class Shelter{
            }
           });
         }
-        //Method to select fabric items
+      //Method to select fabric items
         dataFabricEvent(){
          document.getElementById('Isolation').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
@@ -71,7 +71,7 @@ export class Shelter{
             }
           });
         }
-        //Method to select frontface items
+      //Method to select frontface items
         datafrontfaceEvent(){
          document.getElementById('Facade').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
@@ -82,7 +82,7 @@ export class Shelter{
            }
           });
         }
-        //Method to select door items
+      //Method to select door items
         dataDoorEvent(){
          if(document.getElementById('Porte')){
            document.getElementById('Porte').addEventListener('click', event=>{
@@ -92,7 +92,7 @@ export class Shelter{
             });
          }
        }
-        //Method to select color items
+      //Method to select color items
         dataColorEvent(){
          document.getElementById('Couleur').addEventListener('click', event=>{
              if (event.target.nodeName === "IMG") {
@@ -101,7 +101,7 @@ export class Shelter{
           });
         }
 
-        //Method to display the item in the centre of the HomePage and elements on the side
+      //Method to display the item in the centre of the HomePage and elements on the side
             selectedItem(){
               let choice = event.target.id;
               let key = event.target.parentNode.parentNode.parentNode.id;
@@ -134,7 +134,7 @@ export class Shelter{
               }
             }
 
-          //Method to display options selected
+        //Method to display options selected
             displayItemB() {
               if (this.userSelection.Fondations) {
                 switch(this.userSelection.Fondations.select){
@@ -197,12 +197,13 @@ export class Shelter{
                   }
                }
             }
-            //Method to empty the shelter display
+
+          //Method to empty the reset the app
             reset(){
               let reset = document.getElementById('reset').addEventListener('click', _=>{
                   document.getElementById('display').innerHTML = " ";
                   document.getElementById('selectionUser').innerHTML = " ";
-                  this.userSelection={}
+                  this.userSelection={};
               })
             }
           }

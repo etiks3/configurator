@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: app.js
 * @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified time: 24-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -21,9 +21,12 @@ import { HomePage } from './pages/home/home';
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
   }
+  // Check if user is logged on and prepare to launch the app
   start(){
+    let homePage = new HomePage(this.appBody);
     firebase.auth().onAuthStateChanged((user) =>{
       if (user) {
+        console.log(user);
         // User is signed in.
         console.log('User IS log-> ', user)
         let userDataReady = {
@@ -32,10 +35,12 @@ import { HomePage } from './pages/home/home';
           uid: user.uid
         }
       }
-        let homePage = new HomePage(this.appBody);
+      else{
+        alert('vous n etes pas connecte')
+      }
     });
   }
 }
-
+//Launch the app
 let myApp = new MyApp();
 myApp.start();
