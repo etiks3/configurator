@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: firebase-service.js
 * @Last modified by:   rojas
-* @Last modified time: 24-02-2017
+* @Last modified time: 25-02-2017
 * @Copyright: sylvain rojas
 */
 
@@ -20,8 +20,6 @@ export class FirebaseService{
     this.database = firebase.database();
     this.auth = firebase.auth();
     this.storage = firebase.storage();
-    console.log('firebase ready-> ', this.database);
-    console.log('firebase ready->', this.storage);
   }
 //Firebase CRUD Process
   create(collection, userSelection) {

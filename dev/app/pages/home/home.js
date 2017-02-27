@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: home.js
 * @Last modified by:   rojas
-* @Last modified time: 24-02-2017
+* @Last modified time: 25-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -20,6 +20,7 @@ export class HomePage {
     this.initUI();
     this.loadEventUI();
     this.fbService = new FirebaseService();
+    this.database = new FirebaseService();
     }
 
 //HomePage Initialization
@@ -146,43 +147,33 @@ export class HomePage {
             this.shelter.dataRoofEvent()
         });
       }
-       document.getElementById('save-btn').addEventListener('click', _=>{
-        this.saveData();
+       document.getElementById('save-btn').addEventListener('click', (event)=>{
+        this.saveData(event);
         this.googleAuth(event), false;
       });
     }
-
-//Mtehod to save all projects data in Firebase and link user to database
-    saveData(event){
-      let uID = this.uid || '';
-      this.fbService.create(`toto/${uID}`, this.shelter.userSelection).then(
-        (response)=>{
-          console.log(response);
+    //Mtehod to save all projects data in Firebase and link user to database
+        saveData(event){
+          let uID = user.uid || '';
+          this.fbService.create(`projet/${uID}`, this.shelter.userSelection)
+          .then((response)=>{
+              console.log(response);
+            }
+          ).catch(
+             err => console.log(err)
+          )
         }
-      ).catch(
-        // err => console.log(err)
-      )
-    }
-
 //Method to authenticate through Google
     googleAuth(event){
     event.preventDefault();
     this.fbService.googleAuth()
     .then((result) => {
+      console.log(result);
       let token = result.credential.accessToken;
-      // The signed-in useruID info.
       let user = result.user.uid;
-      // The signed-in user display name
       let userName = result.user.displayName;
-      console.log(userName);
-      console.log('signed-in user info-> ', user)
-      document.getElementById('welcome').innerHTML = `
-      <p>Bonjour ${userName}</p><br/>
-      `
-      document.getElementById('selectionUser').innerHTML = `
-      <tbody>
-        <p>Merci, votre projet a bien été enregistré</p>
-        </tbody>`
     });
   }
+
+
 }

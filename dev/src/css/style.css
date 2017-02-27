@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: style.css
-* @Last modified by:   sylvain
-* @Last modified time: 2017-02-24T13:09:06+01:00
+* @Last modified by:   rojas
+* @Last modified time: 25-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -87,7 +87,7 @@ footer.page-footer{
     top: 2%;
     right: 3%;
     position: fixed;
-    display:none;
+    /*display:none;*/
 }
 
 table{
