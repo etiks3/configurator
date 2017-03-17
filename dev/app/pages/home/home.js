@@ -151,7 +151,7 @@ export class HomePage {
     saveData(event) {
             this.googleAuth()
                 .then(res => {
-                    this.fbService.create(`projet/${res.userEmail}`, this.shelter.userSelection)
+                    this.fbService.create(`projet/${res.userID}`, this.shelter.userSelection)
                         .then((response) => {
                             // console.log(response);
                         }).catch(
@@ -171,11 +171,5 @@ export class HomePage {
                     userEmail: result.user.email
                 }
             });
-    }
-
-
-}
-=======
           }
         }
->>>>>>> b0c6113d7aaa91206812876303141fec36e1deb5
