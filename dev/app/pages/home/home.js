@@ -143,35 +143,33 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
-                // this.saveData(event);
-                // this.googleAuth(event), false;
+                this.saveData(event);
+                this.googleAuth(event), false;
             });
         }
         //Method to save all projects data in Firebase and link user to database
     saveData(event) {
-            let uID = user.uid || '';
-            console.log(uID);
             this.googleAuth()
                 .then(res => {
-                    this.fbService.create(`projet/${res.userId}`, this.shelter.userSelection)
+                    this.fbService.create(`projet/${res.userEmail}`, this.shelter.userSelection)
                         .then((response) => {
-                            console.log(response);
+                            // console.log(response);
                         }).catch(
                             err => console.log(err)
                         )
                 })
-
         }
         //Method to authenticate through Google
     googleAuth(event) {
-        event.preventDefault();
+        // event.preventDefault();
         return this.fbService.googleAuth()
             .then((result) => {
-                console.log(result);
+                console.log(result)
                 return {
                     token: result.credential.accessToken,
                     userId: result.user.uid,
-                    userName: result.user.displayName
+                    userName: result.user.displayName,
+                    userEmail: result.user.email
                 }
             });
     }
