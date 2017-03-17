@@ -157,14 +157,13 @@ export class HomePage {
                         }).catch(
                             err => console.log(err)
                         )
-                })
-        }
+                      })
+                    }
         //Method to authenticate through Google
     googleAuth(event) {
         // event.preventDefault();
         return this.fbService.googleAuth()
             .then((result) => {
-                console.log(result)
                 return {
                     token: result.credential.accessToken,
                     userId: result.user.uid,
@@ -176,3 +175,7 @@ export class HomePage {
 
 
 }
+=======
+          }
+        }
+>>>>>>> b0c6113d7aaa91206812876303141fec36e1deb5
