@@ -17,6 +17,7 @@ import { HomePage } from './pages/home/home';
  class MyApp {
 
   constructor(){
+
     //Initialize Firebase
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
@@ -24,6 +25,7 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
+      console.log('helo');
     firebase.auth().onAuthStateChanged((user) =>{
       if (user) {
         // console.log(user);
