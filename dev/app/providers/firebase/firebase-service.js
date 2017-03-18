@@ -5,7 +5,7 @@
 * @Project: Configurator
 * @Filename: firebase-service.js
 * @Last modified by:   rojas
-* @Last modified time: 24-02-2017
+* @Last modified time: 25-02-2017
 * @Copyright: sylvain rojas
 */
 
@@ -19,9 +19,8 @@ export class FirebaseService{
   constructor(){
     this.database = firebase.database();
     this.auth = firebase.auth();
-    this.storage = firebase.storage();
+    //this.storage = firebase.storage();
     console.log('firebase ready-> ', this.database);
-    console.log('firebase ready->', this.storage);
   }
 //Firebase CRUD Process
   create(collection, userSelection) {
@@ -31,6 +30,7 @@ export class FirebaseService{
         let created = this.database.ref(collection).push(userSelection);
         if(created) {
             resolve(created);
+            console.log(created);
         }
         else {
             reject("The write operation failed");

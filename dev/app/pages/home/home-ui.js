@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home-ui.js
-* @Last modified by:   sylvain
-* @Last modified time: 2017-02-24T13:06:05+01:00
+* @Last modified by:   rojas
+* @Last modified time: 25-02-2017
 * @Copyright: S.Rojas
 */
 
