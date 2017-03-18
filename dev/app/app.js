@@ -25,6 +25,7 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
+    firebase.auth().onAuthStateChanged((user) =>{
       if (user) {
         // console.log(user);
         // User is signed in.
@@ -38,8 +39,9 @@ import { HomePage } from './pages/home/home';
       else{
         alert('vous n etes pas connecte')
       }
-    };
+    });
   }
+}
 
 
 //Launch the app

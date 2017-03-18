@@ -30,7 +30,6 @@ export class FirebaseService{
         let created = this.database.ref(collection).push(userSelection);
         if(created) {
             resolve(created);
-            console.log(created);
         }
         else {
             reject("The write operation failed");

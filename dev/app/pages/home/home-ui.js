@@ -54,9 +54,18 @@ export function homeSkeleton(){
             </g>
       </svg>
       </a>
+
         <div id="welcome"></div>
         <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
       </div>
+      <div class="quickstart-user-details-container">
+      <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
+            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+            <div>Google OAuth Access Token:</div>
+            <pre><code id="quickstart-oauthtoken">null</code></pre>
+          </div>
     </nav>
 
 
