@@ -144,49 +144,21 @@ export class HomePage {
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
                 this.saveData(event);
-<<<<<<< HEAD
+                this.googleAuth(event);
+
             });
         }
         //Method to save all projects data in Firebase and link user to database
     saveData(event) {
-                    this.fbService.create(`projet/${userId}`, this.shelter.userSelection)
-                        .then((response) => {
-                            // console.log(response);
-                        }).catch(
-                            err => console.log(err)
-                        )
-
-                      };
-
-        //Method to authenticate through Google
-    // googleAuth(event) {
-    //     event.preventDefault();
-    //     return this.fbService.googleAuth()
-    //         .then((result) => {
-    //             return {
-    //                 token: result.credential.accessToken,
-    //                 userId: result.user.uid,
-    //                 userName: result.user.displayName,
-    //             }
-    //         });
-    //       }
-        }
-=======
-                this.googleAuth(event), false;
-            });
-        }
-        //Method to save all projects data in Firebase and link user to database
-    saveData(event) {
-            this.googleAuth()
-                .then(res => {
-                    this.fbService.create(`projet/${res.userID}`, this.shelter.userSelection)
-                        .then((response) => {
-                            // console.log(response);
-                        }).catch(
-                            err => console.log(err)
-                        )
-                      })
-                    }
+            let uID = this.uid || '';
+            this.fbService.create(`projet/${uID}`, this.shelter.userSelection).then(
+              (response)=>{
+                console.log(response);
+              }
+            ).catch(
+              err => console.log(err);
+            )
+          }
         //Method to authenticate through Google
     googleAuth(event) {
         event.preventDefault();
@@ -201,4 +173,3 @@ export class HomePage {
             });
           }
         }
->>>>>>> 9975f4d3c8a7dedc5928cf1e2d34edef7b096acc
