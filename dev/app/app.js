@@ -25,22 +25,44 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
-    firebase.auth().onAuthStateChanged((user) =>{
-      if (user) {
-        // console.log(user);
-        // User is signed in.
-        // console.log('User IS log-> ', user)
-        let userDataReady = {
-          name: user.displayName,
-          email: user.email,
-          uid: user.uid
+    initApp() {
+          // Listening for auth state changes.
+          // [START authstatelistener]
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              var displayName = user.displayName;
+              var email = user.email;
+              var emailVerified = user.emailVerified;
+              var photoURL = user.photoURL;
+              var isAnonymous = user.isAnonymous;
+              var uid = user.uid;
+              var providerData = user.providerData;
+              // [START_EXCLUDE]
+              document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+              document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+              document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+              // [END_EXCLUDE]
+            } else {
+              // User is signed out.
+              // [START_EXCLUDE]
+              document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+              document.getElementById('quickstart-sign-in').textContent = 'Sign in with Google';
+              document.getElementById('quickstart-account-details').textContent = 'null';
+              document.getElementById('quickstart-oauthtoken').textContent = 'null';
+              // [END_EXCLUDE]
+            }
+            // [START_EXCLUDE]
+            document.getElementById('quickstart-sign-in').disabled = false;
+            // [END_EXCLUDE]
+          });
+          // [END authstatelistener]
+          document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
         }
-      }
-      else{
-        alert('vous n etes pas connecte')
-      }
-    });
-  }
+        // window.onload = function() {
+        //   initApp();
+        // };
+    }  
 }
 
 

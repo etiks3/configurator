@@ -17,3 +17,4 @@ export const config = {
   storageBucket: "configurateur-b2914.appspot.com",
   messagingSenderId: "546973842528"
   };
+  

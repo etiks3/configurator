@@ -18,8 +18,6 @@ export class FirebaseService{
 
   constructor(){
     this.database = firebase.database();
-    //this.storage = firebase.storage();
-    console.log('firebase ready-> ', this.database);
     this.storage = firebase.storage();
   }
 //Firebase CRUD Process
@@ -49,23 +47,43 @@ export class FirebaseService{
     collection = `${collection}/`;
     return this.database.ref(collection).child(key).remove();
   }
-//Method to display Google Pop-up
-    googleAuth(){
-      let googleProvider = new firebase.auth.GoogleAuthProvider();
-      return this.auth.signInWithPopup(googleProvider)
-    }
-// Method to logout
-    logOut(){
-   let confirmBox = window.confirm("Realy want to logout??");
-   if (confirmBox != true) {
-     return;
-   }
-   this.auth.signOut().then(() => {
-     // Sign-out successful.
-     console.log('Sign-out successful')
-   }, (error) => {
-     // An error happened.
-     console.log('Sign-out error happened')
-   });
- }
+  initApp() {
+        // Listening for auth state changes.
+        // [START authstatelistener]
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            // [START_EXCLUDE]
+            document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+            document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+            document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+            // [END_EXCLUDE]
+          } else {
+            // User is signed out.
+            // [START_EXCLUDE]
+            document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+            document.getElementById('quickstart-sign-in').textContent = 'Sign in with Google';
+            document.getElementById('quickstart-account-details').textContent = 'null';
+            document.getElementById('quickstart-oauthtoken').textContent = 'null';
+            // [END_EXCLUDE]
+          }
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-sign-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authstatelistener]
+        document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+      }
+      // window.onload = function() {
+      //   initApp();
+      // };
+    
+
 }
