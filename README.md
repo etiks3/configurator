@@ -51,7 +51,7 @@ Contribute
 
 Support
 -------
-
+For FireBase Help: https://github.com/firebase/quickstart-js/tree/master/auth
 If you are having issues, please let us know.
 We have a mailing list located at: sylvain.rojas@gmail.com
 
