@@ -150,13 +150,12 @@ export class HomePage {
         }
         //Method to save all projects data in Firebase and link user to database
     saveData(event) {
-            let uID = this.uid || '';
             this.fbService.create(`projet/${uID}`, this.shelter.userSelection).then(
               (response)=>{
                 console.log(response);
               }
             ).catch(
-              err => console.log(err);
+              err => console.log(err)
             )
           }
         //Method to authenticate through Google

@@ -25,20 +25,10 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
-<<<<<<< HEAD
-
-    firebase.auth().onAuthStateChanged((user) =>{
-      if (user) {
-        //User is signed in.
-        console.log('User IS logged-> ', user)
-=======
-      console.log('helo');
-    firebase.auth().onAuthStateChanged((user) =>{
       if (user) {
         // console.log(user);
         // User is signed in.
         // console.log('User IS log-> ', user)
->>>>>>> 9975f4d3c8a7dedc5928cf1e2d34edef7b096acc
         let userDataReady = {
           name: user.displayName,
           email: user.email,
@@ -48,9 +38,10 @@ import { HomePage } from './pages/home/home';
       else{
         alert('vous n etes pas connecte')
       }
-    });
+    };
   }
-}
+
+
 //Launch the app
 let myApp = new MyApp();
 myApp.start();
