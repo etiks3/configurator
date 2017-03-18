@@ -161,7 +161,7 @@ export class HomePage {
                     }
         //Method to authenticate through Google
     googleAuth(event) {
-        // event.preventDefault();
+        event.preventDefault();
         return this.fbService.googleAuth()
             .then((result) => {
                 return {
