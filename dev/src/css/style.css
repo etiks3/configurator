@@ -3,8 +3,13 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: style.css
+<<<<<<< HEAD
 * @Last modified by:   sylvain
 * @Last modified time: 2017-02-24T14:06:32+01:00
+=======
+* @Last modified by:   rojas
+* @Last modified time: 25-02-2017
+>>>>>>> c6d0ae764b8354211ae772c2a850733873beae04
 * @Copyright: S.Rojas
 */
 
@@ -87,7 +92,7 @@ footer.page-footer{
     top: 2%;
     right: 3%;
     position: fixed;
-    display:none;
+    /*display:none;*/
 }
 
 table{

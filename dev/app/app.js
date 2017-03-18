@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: app.js
-* @Last modified by:   sylvain
-* @Last modified time: 2017-02-24T13:06:32+01:00
+* @Last modified by:   rojas
+* @Last modified time: 25-02-2017
 * @Copyright: S.Rojas
 */
 
@@ -17,6 +17,7 @@ import { HomePage } from './pages/home/home';
  class MyApp {
 
   constructor(){
+
     //Initialize Firebase
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
@@ -24,11 +25,12 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
+      console.log('helo');
     firebase.auth().onAuthStateChanged((user) =>{
       if (user) {
-        console.log(user);
+        // console.log(user);
         // User is signed in.
-        console.log('User IS log-> ', user)
+        // console.log('User IS log-> ', user)
         let userDataReady = {
           name: user.displayName,
           email: user.email,
