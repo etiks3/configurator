@@ -19,8 +19,12 @@ export class FirebaseService{
   constructor(){
     this.database = firebase.database();
     this.auth = firebase.auth();
+<<<<<<< HEAD
     //this.storage = firebase.storage();
     console.log('firebase ready-> ', this.database);
+=======
+    this.storage = firebase.storage();
+>>>>>>> 9975f4d3c8a7dedc5928cf1e2d34edef7b096acc
   }
 //Firebase CRUD Process
   create(collection, userSelection) {

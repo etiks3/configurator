@@ -144,6 +144,7 @@ export class HomePage {
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
                 this.saveData(event);
+<<<<<<< HEAD
             });
         }
         //Method to save all projects data in Firebase and link user to database
@@ -170,3 +171,34 @@ export class HomePage {
     //         });
     //       }
         }
+=======
+                this.googleAuth(event), false;
+            });
+        }
+        //Method to save all projects data in Firebase and link user to database
+    saveData(event) {
+            this.googleAuth()
+                .then(res => {
+                    this.fbService.create(`projet/${res.userID}`, this.shelter.userSelection)
+                        .then((response) => {
+                            // console.log(response);
+                        }).catch(
+                            err => console.log(err)
+                        )
+                      })
+                    }
+        //Method to authenticate through Google
+    googleAuth(event) {
+        event.preventDefault();
+        return this.fbService.googleAuth()
+            .then((result) => {
+                return {
+                    token: result.credential.accessToken,
+                    userId: result.user.uid,
+                    userName: result.user.displayName,
+                    userEmail: result.user.email
+                }
+            });
+          }
+        }
+>>>>>>> 9975f4d3c8a7dedc5928cf1e2d34edef7b096acc
