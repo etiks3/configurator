@@ -4,7 +4,7 @@
 * @Project: Configurator
 * @Filename: style.css
 * @Last modified by:   sylvain
-* @Last modified time: 2017-02-24T13:09:06+01:00
+* @Last modified time: 2017-02-24T14:06:32+01:00
 * @Copyright: S.Rojas
 */
 
@@ -38,12 +38,12 @@ p{
     left:3%;
 }
 #start{
-    width: 284px;
-    text-align: center;
-    position: absolute;
-    left: 42%;
-    margin-top: 26%;
-    font-size: 1.5em;
+  width: 500px;
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  margin-top: 26%;
+  font-size: 2.5em;
 }
 nav{
     height: 75px;
