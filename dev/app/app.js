@@ -25,6 +25,7 @@ import { HomePage } from './pages/home/home';
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
+}
     initApp() {
           // Listening for auth state changes.
           // [START authstatelistener]
@@ -62,7 +63,7 @@ import { HomePage } from './pages/home/home';
         // window.onload = function() {
         //   initApp();
         // };
-    }  
+
 }
 
 
