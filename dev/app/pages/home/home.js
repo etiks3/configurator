@@ -3,8 +3,8 @@
  * @Date:   16-02-2017
  * @Project: Configurator
  * @Filename: home.js
- * @Last modified by:   rojas
- * @Last modified time: 25-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-03-19T20:25:33+01:00
  * @Copyright: S.Rojas
  */
 
@@ -19,8 +19,9 @@ export class HomePage {
         this.shelter = new Shelter();
         this.initUI();
         this.loadEventUI();
-        this.fbService = new FirebaseService();
+        this.firebase = new FirebaseService();
         this.database = new FirebaseService();
+        
     }
 
     //HomePage Initialization
@@ -143,7 +144,7 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
-                this.saveData(event);
+                // this.saveData(event);
                 this.toggleSignIn();
 
             });
@@ -152,7 +153,7 @@ export class HomePage {
     saveData(event) {
             let uID = 'tata'|| 'projets';
             console.log(uID);
-              this.fbService.create(`projets/`, this.shelter.userSelection).then(
+              this.firebase.create(`projets/`, this.shelter.userSelection).then(
                 (response)=>{
                   console.log(response);
                 }
@@ -161,8 +162,8 @@ export class HomePage {
               )
           }
           toggleSignIn(){
-            console.log('Helloe');
-            if (!firebase.auth().currentUser) {
+            // if (!firebase.auth().currentUser) {
+            //   console.log(firebase);
               // [START createprovider]
               var provider = new firebase.auth.GoogleAuthProvider();
               // [END createprovider]
@@ -199,4 +200,3 @@ export class HomePage {
           }
 
         }
-      }

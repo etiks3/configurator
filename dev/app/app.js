@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: app.js
-* @Last modified by:   rojas
-* @Last modified time: 25-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-03-19T20:02:34+01:00
 * @Copyright: S.Rojas
 */
 
@@ -60,11 +60,7 @@ import { HomePage } from './pages/home/home';
           // [END authstatelistener]
           document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
         }
-        // window.onload = function() {
-        //   initApp();
-        // };
-
-}
+      }
 
 
 //Launch the app
