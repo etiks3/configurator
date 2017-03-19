@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: config.js
-* @Last modified by:   rojas
-* @Last modified time: 19-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-03-19T20:26:56+01:00
 * @Copyright: S.Rojas
 */
 
@@ -17,4 +17,5 @@ export const config = {
   storageBucket: "configurateur-b2914.appspot.com",
   messagingSenderId: "546973842528"
   };
-  
+
+  // var rootRef = firebase.database().ref();

@@ -4,8 +4,8 @@
 * @Email:  sylvain.rojas@gmail.com
 * @Project: Configurator
 * @Filename: firebase-service.js
-* @Last modified by:   rojas
-* @Last modified time: 25-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-03-19T20:17:17+01:00
 * @Copyright: sylvain rojas
 */
 
@@ -18,7 +18,9 @@ export class FirebaseService{
 
   constructor(){
     this.database = firebase.database();
-    this.storage = firebase.storage();
+    // this.storage = firebase.storage();
+    // this.auth = firebase.auth();
+    console.log('firebase ready->', this.database);
   }
 //Firebase CRUD Process
   create(collection, userSelection) {
@@ -84,6 +86,6 @@ export class FirebaseService{
       // window.onload = function() {
       //   initApp();
       // };
-    
+
 
 }
