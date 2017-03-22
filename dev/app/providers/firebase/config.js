@@ -17,5 +17,3 @@ export const config = {
   storageBucket: "configurateur-b2914.appspot.com",
   messagingSenderId: "546973842528"
   };
-
-  // var rootRef = firebase.database().ref();

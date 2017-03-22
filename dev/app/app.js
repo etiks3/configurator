@@ -61,6 +61,7 @@ import { HomePage } from './pages/home/home';
           document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
         }
       }
+      
 
 
 //Launch the app
