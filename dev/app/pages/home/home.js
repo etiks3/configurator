@@ -20,8 +20,12 @@ export class HomePage {
         this.initUI();
         this.loadEventUI();
         this.database = new FirebaseService();
-        this.user = new FirebaseService();
-        console.log(FirebaseService);
+        // this.user = new FirebaseService();
+        // console.log(this.user)
+
+
+
+
 
     }
 
@@ -145,16 +149,15 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
-                  this.saveData(event);
-                // this.toggleSignIn(event);
+                  this.saveData(event)
 
             });
         }
         // Method to save all projects data in Firebase and link user to database
-    saveData(event) {
-            let uID = 'tata'|| 'projets';
-            console.log(uID);
-              this.firebase.create(`projets/`, this.shelter.userSelection).then(
+        saveData(event) {
+            let userId = this.user;
+            console.log(userId)
+              this.database.create(`projets/+ ${userId}`, this.shelter.userSelection).then(
                 (response)=>{
                   console.log(response);
                 }
@@ -162,43 +165,7 @@ export class HomePage {
                 err => console.log(err)
               )
           }
-        //   toggleSignIn(){
-        //      if (!firebase.auth().currentUser){
-        //     //   console.log(firebase);
-        //       // [START createprovider]
-        //       var provider = new firebase.auth.GoogleAuthProvider();
-        //       // [END createprovider]
-        //       // [START addscopes]
-        //       provider.addScope('https://www.googleapis.com/auth/plus.login');
-        //       // [END addscopes]
-        //       // [START signin]
-        //       firebase.auth().signInWithPopup(provider).then(function(result) {
-        //         // This gives you a Google Access Token. You can use it to access the Google API.
-        //         var token = result.credential.accessToken;
-        //         // The signed-in user info.
-        //         var user = result.user;
-        //         // [START_EXCLUDE]
-        //         document.getElementById('quickstart-oauthtoken').textContent = token;
-        //         // [END_EXCLUDE]
-        //       }).catch(function(error) {
-        //         // Handle Errors here.
-        //         var errorCode = error.code;
-        //         var errorMessage = error.message;
-        //         // The email of the user's account used.
-        //         var email = error.email;
-        //         // The firebase.auth.AuthCredential type that was used.
-        //         var credential = error.credential;
-        //         // [START_EXCLUDE]
-        //         if (errorCode === 'auth/account-exists-with-different-credential') {
-        //           alert('You have already signed up with a different auth provider for that email.');
-        //           // If you are using multiple auth providers on your app you should handle linking
-        //           // the user's accounts here.
-        //         } else {
-        //           console.error(error);
-        //         }
-        //         // [END_EXCLUDE]
-        //       });
-        //   }
-        //
-        // }
+
+
+
 }

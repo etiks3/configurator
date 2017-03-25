@@ -14,53 +14,38 @@ import * as firebase from "firebase";
 import { config } from './providers/firebase/config';
 import { HomePage } from './pages/home/home';
 
- class MyApp {
+ export class MyApp {
 
   constructor(){
 
     //Initialize Firebase
     firebase.initializeApp(config);
     this.appBody = document.getElementsByTagName("app")[0];
+
   }
   // Check if user is logged on and prepare to launch the app
   start(){
     let homePage = new HomePage(this.appBody);
-}
-    initApp() {
-          // Listening for auth state changes.
-          // [START authstatelistener]
-          firebase.auth().onAuthStateChanged(function(user) {
+
+        firebase.auth().onAuthStateChanged((user) =>{
             if (user) {
-              // User is signed in.
-              var displayName = user.displayName;
-              var email = user.email;
-              var emailVerified = user.emailVerified;
-              var photoURL = user.photoURL;
-              var isAnonymous = user.isAnonymous;
-              var uid = user.uid;
-              var providerData = user.providerData;
-              // [START_EXCLUDE]
-              document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-              document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-              document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-              // [END_EXCLUDE]
+                // User is signed in.
+                console.log('User IS log-> ', user)
+                let userDataReady = {
+                    name: user.displayName,
+                    email: user.email,
+                    uid: user.uid
+                }
             } else {
-              // User is signed out.
-              // [START_EXCLUDE]
-              document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-              document.getElementById('quickstart-sign-in').textContent = 'Sign in with Google';
-              document.getElementById('quickstart-account-details').textContent = 'null';
-              document.getElementById('quickstart-oauthtoken').textContent = 'null';
-              // [END_EXCLUDE]
+                // No user is signed in.
+                console.log('User NOT log.')
+                // init HomePage
+                let homePage = new HomePage(this.appBody);
             }
-            // [START_EXCLUDE]
-            document.getElementById('quickstart-sign-in').disabled = false;
-            // [END_EXCLUDE]
-          });
-          // [END authstatelistener]
-          document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-        }
-      }
+        });
+    }
+
+ }
       
 
 
