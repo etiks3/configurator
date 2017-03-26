@@ -3,8 +3,8 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: home-ui.js
-* @Last modified by:   rojas
-* @Last modified time: 25-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-03-26T18:20:18+02:00
 * @Copyright: S.Rojas
 */
 
@@ -57,6 +57,7 @@ export function homeSkeleton(){
 
         <div id="welcome"></div>
         <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
+        <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
       </div>
       <div class="quickstart-user-details-container">
       <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
