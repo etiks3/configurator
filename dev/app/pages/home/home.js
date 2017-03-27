@@ -4,7 +4,7 @@
  * @Project: Configurator
  * @Filename: home.js
 * @Last modified by:   sylvain
-* @Last modified time: 2017-03-19T20:25:33+01:00
+* @Last modified time: 2017-03-26T18:23:42+02:00
  * @Copyright: S.Rojas
  */
 
@@ -19,7 +19,7 @@ export class HomePage {
         this.shelter = new Shelter();
         this.initUI();
         this.loadEventUI();
-        this.database = new FirebaseService();
+        this.firebaseService = new FirebaseService();
         // this.user = new FirebaseService();
         // console.log(this.user)
 
@@ -149,21 +149,32 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', (event) => {
-                  this.saveData(event)
-
+                if (!this.firebaseService.isLogged()) {
+                    this.firebaseService.loginWithGoogle();
+                }
+                this.saveData(event);
             });
+            document.getElementById('logout-btn').addEventListener('click', (event) => {
+                if (!this.firebaseService.isLogged()) {
+                    this.firebaseService.logout();
+                }else{
+                  console.log ("Alreadz logged out");
+                }
+            });
+
         }
         // Method to save all projects data in Firebase and link user to database
         saveData(event) {
-            let userId = this.user;
-            console.log(userId)
-              this.database.create(`projets/+ ${userId}`, this.shelter.userSelection).then(
+          console.log("User Selection ",this.shelter.userSelection);
+          this.firebaseService.create(this.shelter.userSelection)
+          .then(
                 (response)=>{
                   console.log(response);
                 }
               ).catch(
                 err => console.log(err)
               )
+
           }
 
 
