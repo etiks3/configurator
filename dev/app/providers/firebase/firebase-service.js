@@ -90,6 +90,7 @@ export class FirebaseService{
     return new Promise((resolve, reject) => {
         //let created = this.database.ref(collection).push(userSelection);
         let created = firebase.database().ref(`users/${userId}/projects`).push(userSelection);
+        console.log(created)
         if(created) {
             resolve(created);
         }

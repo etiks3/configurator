@@ -158,7 +158,7 @@ export class HomePage {
                 if (!this.firebaseService.isLogged()) {
                     this.firebaseService.logout();
                 }else{
-                  console.log ("Alreadz logged out");
+                  console.log ("Already logged out");
                 }
             });
 
