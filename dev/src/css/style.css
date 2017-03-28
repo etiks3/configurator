@@ -68,7 +68,7 @@ footer.page-footer{
 .container{
     margin-top: 14px;
     background-color: #E5E5E5
-    background-color: ;
+
 }
 .grey-text.text-lighten-3, .grey-text.text-lighten-4{
     color:#999 !important;
@@ -89,10 +89,13 @@ footer.page-footer{
 }
 #save-btn{
     background-color: #6BAD4A;
-    top: 2%;
+    bottom: 0%;
     right: 3%;
-    position: fixed;
-    /*display:none;*/
+
+}
+#logout-btn{
+    right: 16%;
+    top:2%;
 }
 
 table{
@@ -101,8 +104,18 @@ table{
 }
 #start{
   visibility:visible;
+    z-index: -1;
 }
 
+.modal{
+    top: 38%;
+    width:32%;
+    max-height:13%;
+}
+
+#modal-btn-save{
+    top:2%;
+}
 /*================== MARKERS ====================*/
 .btn-floating.btn-large i{
     line-height: 40px;

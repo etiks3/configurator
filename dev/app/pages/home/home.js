@@ -148,34 +148,30 @@ export class HomePage {
                     this.shelter.dataRoofEvent()
                 });
             }
-            document.getElementById('save-btn').addEventListener('click', (event) => {
-                if (!this.firebaseService.isLogged()) {
-                    this.firebaseService.loginWithGoogle();
-                }
-                this.saveData(event);
-            });
-            document.getElementById('logout-btn').addEventListener('click', (event) => {
-                if (!this.firebaseService.isLogged()) {
-                    this.firebaseService.logout();
-                }else{
-                  console.log ("Already logged out");
-                }
-            });
+            document.getElementById('save-btn').addEventListener('click', () => {
+              this.firebaseService.loginWithGoogle();
+                    });
+            document.getElementById('logout-btn').addEventListener('click', () => {
 
+                    this.firebaseService.logout();
+                      console.log ("Already logged out");
+                     });
         }
         // Method to save all projects data in Firebase and link user to database
-        saveData(event) {
-          console.log("User Selection ",this.shelter.userSelection);
-          this.firebaseService.create(this.shelter.userSelection)
-          .then(
+        saveData() {
+          if (this.firebaseService.isLogged()) {
+            this.firebaseService.create(this.shelter.userSelection)
+              .then(
                 (response)=>{
                   console.log(response);
                 }
               ).catch(
-                err => console.log(err)
-              )
+              err => console.log(err)
+            )
 
           }
+          }
+
 
 
 

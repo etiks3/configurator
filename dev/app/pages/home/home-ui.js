@@ -1,19 +1,19 @@
 /**
-* @Author: Sylvain Rojas <Rojas>
-* @Date:   16-02-2017
-* @Project: Configurator
-* @Filename: home-ui.js
-* @Last modified by:   sylvain
-* @Last modified time: 2017-03-26T18:20:18+02:00
-* @Copyright: S.Rojas
-*/
+ * @Author: Sylvain Rojas <Rojas>
+ * @Date:   16-02-2017
+ * @Project: Configurator
+ * @Filename: home-ui.js
+ * @Last modified by:   sylvain
+ * @Last modified time: 2017-03-26T18:20:18+02:00
+ * @Copyright: S.Rojas
+ */
 
 
 
-export function homeSkeleton(){
+export function homeSkeleton () {
   return `
 <!-- HEADER -->
-  <nav>
+  
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
         <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -54,28 +54,28 @@ export function homeSkeleton(){
             </g>
       </svg>
       </a>
-
-        <div id="welcome"></div>
-        <a id="save-btn" class="waves-effect waves-light btn">Enregister</a>
-        <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
+   <div class="row center">
+        <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
       </div>
-      <div class="quickstart-user-details-container">
-      <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
-            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-            <div>Firebase auth <code>currentUser</code> object value:</div>
-            <pre><code id="quickstart-account-details">null</code></pre>
-            <div>Google OAuth Access Token:</div>
-            <pre><code id="quickstart-oauthtoken">null</code></pre>
-          </div>
-    </nav>
-
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Sauvegarder Votre projet</h4>
+      <p>Pour pouvoir sauvgarder votre projet, merci de bien vouloir vous authentifier</p>
+    </div>
+    <div class="modal-footer">
+    <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
+    </div>
+  </div>
+      <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
+    
 
 <!-- MAIN  -->
   <section id="shelter">
           <div id="userInfo"></div>
           <div id="start">
-          Pour configurer votre abris,<br/>
-          veuillez appuyer sur le marqueur vert en bas à gauche de l'écran
+          <p>Pour configurer votre abris,
+          <br/>
+          veuillez appuyer sur le marqueur vert en bas à gauche de l'écran<p>
           </div>
             <div class="choice1 ">
                   <button id="foundation-marker" class="marker1 btn-floating btn-large red"><i class="material-icons">add</i></button>
@@ -108,7 +108,6 @@ export function homeSkeleton(){
                 <a id="reset" class="waves-effect waves-light btn">Effacer</a>
     </section>
 
-
 <!-- FOOTER -->
     <footer class="page-footer">
             <div class="container">
@@ -116,5 +115,5 @@ export function homeSkeleton(){
           </div>
         </footer>
 
-  `;
+  `
 }
