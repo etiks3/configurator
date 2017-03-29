@@ -56,22 +56,21 @@ export function homeSkeleton () {
       </svg>
       </a>
       </nav>
-      <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
       <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
-    
+      
 <-- MODAL -->
-<div class="row center">
-        <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
-      </div>
-<div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Sauvegarder Votre projet</h4>
-      <p>Pour pouvoir sauvgarder votre projet, merci de bien vouloir vous authentifier</p>
-    </div>
-    <div class="modal-footer">
-    <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
-    </div>
-  </div>
+      <div class="row center">
+              <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
+            </div>
+      <div id="modal1" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Sauvegarder Votre projet</h4>
+            <p>Pour pouvoir sauvgarder votre projet, merci de bien vouloir vous authentifier</p>
+          </div>
+          <div class="modal-footer">
+          <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
+          </div>
+        </div>
   
 <!-- MAIN  -->
   <section id="shelter">

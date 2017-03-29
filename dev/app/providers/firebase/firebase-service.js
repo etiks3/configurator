@@ -26,14 +26,10 @@ export class FirebaseService{
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
-            console.log('User IS logged-> ', user)
-            //window.sessionLocal.storage
-
+            console.log('User IS logged-> ', user);
         } else {
             // No user is signed in.
             console.log('User NOT logged.')
-            // init HomePage
-//            let homePage = new HomePage(this.appBody);
         }
     });
   }
@@ -55,7 +51,6 @@ export class FirebaseService{
       var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
-      // ...
     });
   }
 
@@ -65,11 +60,10 @@ export class FirebaseService{
 
   logout(){
     firebase.auth().signOut().then(function() {
-//      sessionStorage.removeItem('user');
       console.log ("logout successful");
-      alert('logout succesfull')
   // Sign-out successful.
     }, function(error) {
+      // An error happened
       console.error ("failed to logout");
     });
 

@@ -21,8 +21,6 @@ export class HomePage {
         this.initUI();
         this.loadEventUI();
         this.firebaseService = new FirebaseService();
-        // this.user = new FirebaseService();
-        // console.log(this.user)
 
 
 
@@ -153,15 +151,14 @@ export class HomePage {
               this.firebaseService.loginWithGoogle();
                     });
             document.getElementById('logout-btn').addEventListener('click', () => {
-
                     this.firebaseService.logout();
-                      console.log ("Already logged out");
-                      document.getElementById('logout-btn').innerHTML = '';
                      });
         }
         // Method to save all projects data in Firebase and link user to database
         saveData() {
           if (this.firebaseService.isLogged()) {
+            document.getElementById('logout-btn').innerHTML = '';
+            console.log('hello')
             this.firebaseService.create(this.shelter.userSelection)
               .then(
                 (response)=>{
@@ -172,5 +169,4 @@ export class HomePage {
             )
           }
         }
-
 }
