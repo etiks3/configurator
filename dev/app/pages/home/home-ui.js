@@ -13,7 +13,8 @@
 export function homeSkeleton () {
   return `
 <!-- HEADER -->
-  
+
+  <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
         <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -54,7 +55,12 @@ export function homeSkeleton () {
             </g>
       </svg>
       </a>
-   <div class="row center">
+      </nav>
+      <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
+      <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
+    
+<-- MODAL -->
+<div class="row center">
         <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
       </div>
 <div id="modal1" class="modal modal-fixed-footer">
@@ -66,9 +72,7 @@ export function homeSkeleton () {
     <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
     </div>
   </div>
-      <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
-    
-
+  
 <!-- MAIN  -->
   <section id="shelter">
           <div id="userInfo"></div>
@@ -114,6 +118,7 @@ export function homeSkeleton () {
             © 2014 Kalpana-Solutions
           </div>
         </footer>
+        </div>
 
   `
 }

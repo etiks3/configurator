@@ -12,6 +12,7 @@ import { FirebaseService } from '../../providers/firebase/firebase-service';
 import { homeSkeleton } from './home-ui'
 import { Shelter } from '../../components/shelter';
 
+
 export class HomePage {
 
     constructor(appBody) {
@@ -155,6 +156,7 @@ export class HomePage {
 
                     this.firebaseService.logout();
                       console.log ("Already logged out");
+                      document.getElementById('logout-btn').innerHTML = '';
                      });
         }
         // Method to save all projects data in Firebase and link user to database
@@ -168,11 +170,7 @@ export class HomePage {
               ).catch(
               err => console.log(err)
             )
-
           }
-          }
-
-
-
+        }
 
 }
