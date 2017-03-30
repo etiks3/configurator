@@ -10,10 +10,10 @@
 
 
 
-export function homeSkeleton () {
-  return `
+export function homeSkeleton() {
+    return `
 <!-- HEADER -->
-  
+  <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
         <svg id="logo_footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -54,6 +54,11 @@ export function homeSkeleton () {
             </g>
       </svg>
       </a>
+      <div id="welcome">
+  <p style="color:black">Welcome: <span id="user"></span></p>
+  </div>
+      
+      </nav>
    <div class="row center">
         <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
       </div>
@@ -67,7 +72,8 @@ export function homeSkeleton () {
     </div>
   </div>
       <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
-    
+      
+
 
 <!-- MAIN  -->
   <section id="shelter">
