@@ -62,6 +62,8 @@ export class FirebaseService {
     logout() {
         firebase.auth().signOut().then(function() {
             console.log("logout successful");
+            alert('Are you sure to quit?')
+            document.getElementById('user').innerHTML = " ";
             // Sign-out successful.
         }, function(error) {
             // An error happened
