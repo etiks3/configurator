@@ -26,6 +26,7 @@ export class FirebaseService {
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
                 // User is signed in.
+                document.getElementById('user').innerHTML = user.displayName;
                 console.log('User IS logged-> ', user);
             } else {
                 // No user is signed in.
