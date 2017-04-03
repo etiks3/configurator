@@ -9,8 +9,9 @@
  */
 
 import { FirebaseService } from '../../providers/firebase/firebase-service';
-import { homeSkeleton } from './home-ui'
+import { homeSkeleton } from './home-ui';
 import { Shelter } from '../../components/shelter';
+import { user } from '../../providers/firebase/firebase-service';
 
 
 export class HomePage {
@@ -148,6 +149,7 @@ export class HomePage {
             });
             document.getElementById('logout-btn').addEventListener('click', () => {
                 this.firebaseService.logout();
+
             });
         }
         // Method to save all projects data in Firebase and link user to database
