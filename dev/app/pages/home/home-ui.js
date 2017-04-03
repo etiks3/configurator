@@ -12,11 +12,7 @@
 
 export function homeSkeleton() {
     return `
-<!-- HEADER -->
-<<<<<<< HEAD
-=======
 
->>>>>>> 9e14568051cb1a2b318dcf611dc140af57002aaa
   <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">
@@ -58,7 +54,6 @@ export function homeSkeleton() {
             </g>
       </svg>
       </a>
-<<<<<<< HEAD
       <div id="welcome">
   <p style="color:black">Welcome: <span id="user"></span></p>
   </div>
@@ -77,28 +72,7 @@ export function homeSkeleton() {
     </div>
   </div>
       <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
-      
-
-
-=======
-      </nav>
-      <a id="logout-btn" class="waves-effect waves-light btn">Logout</a>
-      
-<-- MODAL -->
-      <div class="row center">
-              <button id="modal-btn-save" data-target="modal1" class="btn modal-trigger">Sauvegarder</button>
-            </div>
-      <div id="modal1" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h4>Sauvegarder Votre projet</h4>
-            <p>Pour pouvoir sauvgarder votre projet, merci de bien vouloir vous authentifier</p>
-          </div>
-          <div class="modal-footer">
-          <a href="#!" id="save-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Google Login</a>
-          </div>
-        </div>
-  
->>>>>>> 9e14568051cb1a2b318dcf611dc140af57002aaa
+    
 <!-- MAIN  -->
   <section id="shelter">
           <div id="userInfo"></div>

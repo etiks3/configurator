@@ -3,8 +3,8 @@
  * @Date:   16-02-2017
  * @Project: Configurator
  * @Filename: home.js
-* @Last modified by:   sylvain
-* @Last modified time: 2017-03-26T18:23:42+02:00
+ * @Last modified by:   sylvain
+ * @Last modified time: 2017-03-26T18:23:42+02:00
  * @Copyright: S.Rojas
  */
 
@@ -21,12 +21,8 @@ export class HomePage {
         this.initUI();
         this.loadEventUI();
         this.firebaseService = new FirebaseService();
-
-
-
-
-
     }
+
 
     //HomePage Initialization
     initUI() {
@@ -148,25 +144,25 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', () => {
-              this.firebaseService.loginWithGoogle();
-                    });
+                this.firebaseService.loginWithGoogle();
+            });
             document.getElementById('logout-btn').addEventListener('click', () => {
-                    this.firebaseService.logout();
-                     });
+                this.firebaseService.logout();
+            });
         }
         // Method to save all projects data in Firebase and link user to database
-        saveData() {
-          if (this.firebaseService.isLogged()) {
+    saveData() {
+        if (this.firebaseService.isLogged()) {
             document.getElementById('logout-btn').innerHTML = '';
             console.log('hello')
             this.firebaseService.create(this.shelter.userSelection)
-              .then(
-                (response)=>{
-                  console.log(response);
-                }
-              ).catch(
-              err => console.log(err)
-            )
-          }
+                .then(
+                    (response) => {
+                        console.log(response);
+                    }
+                ).catch(
+                    err => console.log(err)
+                )
         }
+    }
 }
