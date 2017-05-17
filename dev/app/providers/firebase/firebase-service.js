@@ -67,32 +67,9 @@ export class FirebaseService{
       // An error happened
       console.error ("failed to logout");
     });
-export class FirebaseService {
 
-    constructor() {
-        this.database = firebase.database();
-        this.storage = firebase.storage();
-        this.user = firebase.auth();
-        this.loginCallBack();
-    }
-
+  }
     
-    isLogged() {
-        return firebase.auth().currentUser;
-    }
-
-    logout() {
-        firebase.auth().signOut().then(function() {
-            console.log("logout successful");
-            alert('Are you sure to quit?')
-            document.getElementById('user').innerHTML = " ";
-            // Sign-out successful.
-        }, function(error) {
-            // An error happened
-            console.error("failed to logout");
-        });
-
-    }
 
     //Firebase CRUD Process
     create(userSelection) {
