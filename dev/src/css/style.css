@@ -3,242 +3,276 @@
 * @Date:   16-02-2017
 * @Project: Configurator
 * @Filename: style.css
-<<<<<<< HEAD
 * @Last modified by:   sylvain
 * @Last modified time: 2017-04-10T20:26:52+02:00
-=======
 * @Last modified by:   sylvain
 * @Last modified time: 2017-04-10T20:26:52+02:00
->>>>>>> c6d0ae764b8354211ae772c2a850733873beae04
 * @Copyright: S.Rojas
 */
 
 html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  }
+}
 
-body{
+body {
     background: url(../img/bg/bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-h1{
-    font-size:20px;
+
+h1 {
+    font-size: 20px;
 }
-p{
-    margin:0px;
+
+p {
+    margin: 0px;
 }
-#welcome{
+
+#welcome {
     width: 300px;
     margin-left: 83%;
+    margin-left: 61%;
     color: #6BAD4A;
     padding-top: 12px;
     font-size: 1.2em;
 }
-#shelter{
-    margin:0 auto;
-    height:auto ;
-    left:3%;
+
+#shelter {
+    margin: 0 auto;
+    height: auto;
+    left: 3%;
 }
-#start{
-  width: 500px;
-  text-align: center;
-  position: absolute;
-  left: 35%;
-  margin-top: 26%;
-  font-size: 2.5em;
+
+#start {
+    width: 500px;
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    margin-top: 26%;
+    font-size: 2.5em;
 }
-nav{
+
+nav {
     height: 75px;
     background-color: #E5E5E5;
-    position:fixed;
-}
-footer{
-    bottom:0;
-    width: 100%;
-    height:auto;
-    position:fixed;
+    position: fixed;
 }
 
-footer.page-footer{
-    background-color:#E5E5E5;
+footer {
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    position: fixed;
 }
-.container{
+
+footer.page-footer {
+    background-color: #E5E5E5;
+}
+
+.container {
     margin-top: 14px;
     background-color: #E5E5E5
-
-}
-.grey-text.text-lighten-3, .grey-text.text-lighten-4{
-    color:#999 !important;
-}
-.white-text{
-    margin:30px;
-    color:#6BAD4A !important;
 }
 
-#logo_footer{
-    float:left;
+.grey-text.text-lighten-3,
+.grey-text.text-lighten-4 {
+    color: #999 !important;
 }
-#reset{
+
+.white-text {
+    margin: 30px;
+    color: #6BAD4A !important;
+}
+
+#logo_footer {
+    float: left;
+}
+
+#reset {
     background-color: #6BAD4A;
     top: 80%;
     right: 3%;
     position: absolute;
 }
-#save-btn{
+
+#save-btn {
     background-color: #6BAD4A;
     bottom: 0%;
     right: 3%;
-
 }
 #logout-btn{
     right: 4%;
     top:8%;
+
 }
 
-table{
+#table {
     width: 100%;
     display: table;
 }
-#start{
-  visibility:visible;
+
+#start {
+    visibility: visible;
     z-index: -1;
 }
 
-.modal{
+.modal {
     top: 38%;
-    width:32%;
-    max-height:13%;
+    width: 32%;
+    max-height: 13%;
 }
 
 #modal-btn-save{
     top:86%;
 }
+
+
 /*================== MARKERS ====================*/
-.btn-floating.btn-large i{
+
+.btn-floating.btn-large i {
     line-height: 40px;
 }
-.btn-floating.btn-large{
+
+.btn-floating.btn-large {
     width: 40px;
     height: 40px;
 }
-.marker1.btn-floating.btn-large{
+
+.marker1.btn-floating.btn-large {
     top: 183px;
     right: 35px;
 }
-.marker2.btn-floating.btn-large{
+
+.marker2.btn-floating.btn-large {
     top: 183px;
     right: 35px;
     visibility: hidden;
 }
-.marker3.btn-floating.btn-large{
+
+.marker3.btn-floating.btn-large {
     top: 15px;
     left: 132px;
     visibility: hidden;
 }
-.marker4.btn-floating.btn-large{
+
+.marker4.btn-floating.btn-large {
     top: 15px;
     left: 132px;
     visibility: hidden;
 }
-.marker5.btn-floating.btn-large{
+
+.marker5.btn-floating.btn-large {
     top: 183px;
     right: 35px;
     visibility: hidden;
 }
-.marker6.btn-floating.btn-large{
+
+.marker6.btn-floating.btn-large {
     top: 221px;
     right: 35px;
     visibility: hidden;
 }
-.marker7.btn-floating.btn-large{
+
+.marker7.btn-floating.btn-large {
     visibility: hidden;
 }
 
-.choice1{
+.choice1 {
     position: absolute;
     width: 147px;
     left: 5%;
     top: 54%;
-    }
-.choice2{
+}
+
+.choice2 {
     position: absolute;
     width: 147px;
     left: 5%;
     top: 313px;
 }
-.choice3{
+
+.choice3 {
     position: absolute;
     width: 147px;
     left: 200px;
     top: 150px;
 }
-#card3{
+
+#card3 {
     left: 156px;
     bottom: 147px;
 }
-.choice4{
-    position:absolute;
+
+.choice4 {
+    position: absolute;
     width: 147px;
     left: 800px;
     top: 150px;
 }
-#card4{
+
+#card4 {
     left: 156px;
     bottom: 147px;
 }
-.choice5{
+
+.choice5 {
     position: absolute;
     width: 147px;
     right: 250px;
     top: 548px;
 }
-.choice6{
+
+.choice6 {
     position: absolute;
     width: 147px;
     right: 250px;
     top: 768px;
 }
-.choice7{
-  position:absolute;
-    width:147px;
+
+.choice7 {
+    position: absolute;
+    width: 147px;
     left: 600px;
 }
 
 
-
 /*================== BUTTONS ====================*/
 
-.red{
+.red {
     background-color: #6BAD4A !important;
 }
-.btn{
+
+.btn {
     background-color: #6BAD4A;
     top: 4%;
     right: 3%;
     position: fixed;
 }
 
+
 /*================== DISPLAY CENTER ====================*/
 
-#display{
+#display {
     position: fixed;
     top: 31%;
     left: 18%;
 }
-#display img{
+
+#display img {
     position: absolute;
     width: 1000px;
     top: 61%;
     left: 25%;
 }
 
+
 /*================== DISPLAY SELECTION ====================*/
-#selectionUser{
-    float:right;
+
+#selectionUser {
+    float: right;
     margin-top: 50px;
     margin-right: 58px;
-    width:400px;
+    width: 400px;
 }

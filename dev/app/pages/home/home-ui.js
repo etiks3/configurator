@@ -54,7 +54,6 @@ export function homeSkeleton() {
             </g>
       </svg>
       </a>
-
       <div id="welcome">
   <p style="color:black">Welcome: <span id="user"></span></p>
   </div>
@@ -91,6 +90,7 @@ export function homeSkeleton() {
 //           </div>
 //         </div>
   
+    
 <!-- MAIN  -->
   <section id="shelter">
           <div id="userInfo"></div>

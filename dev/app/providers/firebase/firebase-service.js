@@ -67,20 +67,58 @@ export class FirebaseService{
       // An error happened
       console.error ("failed to logout");
     });
+export class FirebaseService {
 
-  }
+    constructor() {
+        this.database = firebase.database();
+        this.storage = firebase.storage();
+        this.user = firebase.auth();
+        this.loginCallBack();
+    }
 
-//Firebase CRUD Process
-  create(userSelection) {
-    // define firebase collection with correct style
-    let userId = firebase.auth().currentUser;
-    return new Promise((resolve, reject) => {
-        //let created = this.database.ref(collection).push(userSelection);
-        let created = firebase.database().ref(`users/${userId}/projects`).push(userSelection);
-        console.log(created)
-        if(created) {
-            resolve(created);
+    
+    isLogged() {
+        return firebase.auth().currentUser;
+    }
+
+    logout() {
+        firebase.auth().signOut().then(function() {
+            console.log("logout successful");
+            alert('Are you sure to quit?')
+            document.getElementById('user').innerHTML = " ";
+            // Sign-out successful.
+        }, function(error) {
+            // An error happened
+            console.error("failed to logout");
+        });
+
+    }
+
+    //Firebase CRUD Process
+    create(userSelection) {
+            // define firebase collection with correct style
+            let userId = firebase.auth().currentUser;
+            return new Promise((resolve, reject) => {
+                //let created = this.database.ref(collection).push(userSelection);
+                let created = firebase.database().ref(`users/${userId}/projects`).push(userSelection);
+                console.log(created)
+                if (created) {
+                    resolve(created);
+                }
+            });
         }
-    });
-}
+        // Read from database
+    read(collection) {
+        return this.database.ref(collection);
+    };
+    // Update from database
+    update(collection, key, userSelection) {
+            collection = `${collection}/`;
+            return this.database.ref(collection).child(key).update(userSelection);
+        }
+        // Delet from database
+    delete(collection, key) {
+        collection = `${collection}/`;
+        return this.database.ref(collection).child(key).remove();
+    }
 }

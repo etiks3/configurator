@@ -3,14 +3,15 @@
  * @Date:   16-02-2017
  * @Project: Configurator
  * @Filename: home.js
-* @Last modified by:   sylvain
-* @Last modified time: 2017-03-26T18:23:42+02:00
+ * @Last modified by:   sylvain
+ * @Last modified time: 2017-03-26T18:23:42+02:00
  * @Copyright: S.Rojas
  */
 
 import { FirebaseService } from '../../providers/firebase/firebase-service';
-import { homeSkeleton } from './home-ui'
+import { homeSkeleton } from './home-ui';
 import { Shelter } from '../../components/shelter';
+import { user } from '../../providers/firebase/firebase-service';
 
 
 export class HomePage {
@@ -22,6 +23,7 @@ export class HomePage {
         this.loadEventUI();
         this.firebaseService = new FirebaseService();
     }
+
 
     //HomePage Initialization
     initUI() {
@@ -144,8 +146,8 @@ export class HomePage {
                 });
             }
             document.getElementById('save-btn').addEventListener('click', () => {
-              this.firebaseService.loginWithGoogle();
-                    });
+                this.firebaseService.loginWithGoogle();
+            });
             document.getElementById('logout-btn').addEventListener('click', () => {
                     this.firebaseService.logout();
                     document.getElementById('user').innerHTML=" ";
@@ -168,3 +170,4 @@ export class HomePage {
         //   }
         // }
 }
+     
