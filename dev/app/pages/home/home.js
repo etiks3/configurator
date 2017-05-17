@@ -42,7 +42,7 @@ export class HomePage {
             let foundation_marker = document.getElementById("foundation-marker")
             if (foundation_marker) {
                 foundation_marker.addEventListener('click', (e) => {
-                    // document.getElementById('start').style.visibility = "hidden";
+                    document.getElementById('start').style.visibility = "hidden";
                     console.log('start')
                     let menu_foundation = this.shelter.foundationDisplay()
                     let foundation = document.getElementById("foundations")

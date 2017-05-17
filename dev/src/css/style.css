@@ -40,9 +40,10 @@ p {
 }
 
 #shelter {
-    margin: 0 auto;
+       margin: 0 auto;
     height: auto;
     left: 3%;
+    position: fixed;
 }
 
 #start {
@@ -91,10 +92,11 @@ footer.page-footer {
 }
 
 #reset {
-    background-color: #6BAD4A;
-    top: 80%;
-    right: 3%;
-    position: absolute;
+       background-color: #6BAD4A;
+    top: 10%;
+    left: 71%;
+    right: 17%;
+    padding-right: -17%;
 }
 
 #save-btn {
@@ -104,7 +106,7 @@ footer.page-footer {
 }
 #logout-btn{
     right: 4%;
-    top:8%;
+    top:10%;
 
 }
 
@@ -121,11 +123,12 @@ footer.page-footer {
 .modal {
     top: 38%;
     width: 32%;
-    max-height: 13%;
+   max-height: 30%;
 }
 
 #modal-btn-save{
-    top:86%;
+    top:10%;
+    right: 30%;
 }
 
 
@@ -258,6 +261,7 @@ footer.page-footer {
     position: fixed;
     top: 31%;
     left: 18%;
+    
 }
 
 #display img {
@@ -271,8 +275,13 @@ footer.page-footer {
 /*================== DISPLAY SELECTION ====================*/
 
 #selectionUser {
-    float: right;
+   
     margin-top: 50px;
     margin-right: 58px;
     width: 400px;
+    position: fixed;
+}
+
+thead{
+    border-bottom: 1px solid #4caf50;
 }
