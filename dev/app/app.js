@@ -16,22 +16,16 @@ import { HomePage } from './pages/home/home';
 export class MyApp {
 
     constructor() {
-
         //Initialize Firebase
         firebase.initializeApp(config);
         this.appBody = document.getElementsByTagName("app")[0];
-
     }
-
+    
     // Check if user is logged on and prepare to launch the app
     start() {
         let homePage = new HomePage(this.appBody);
-
-
     }
-
 }
-
 
 //Launch the app
 let myApp = new MyApp();

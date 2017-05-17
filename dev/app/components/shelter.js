@@ -48,8 +48,10 @@ export class Shelter{
         dataFoundEvent(){
           document.getElementById('Fondations').addEventListener('click', event=>{
            if (event.target.nodeName === "IMG") {
-             this.selectedItem();
+             let selected = this.selectedItem();
+             console.log(selected)
              document.getElementById('structure-marker').style.visibility = "visible";
+             
             }
           });
         }
@@ -68,6 +70,7 @@ export class Shelter{
            if (event.target.nodeName === "IMG") {
              this.selectedItem();
              document.getElementById('frontface-marker').style.visibility = "visible";
+             
             }
           });
         }
@@ -104,6 +107,7 @@ export class Shelter{
       //Method to display the item in the centre of the HomePage and elements on the side
             selectedItem(){
               let choice = event.target.id;
+              console.log(choice)
               let key = event.target.parentNode.parentNode.parentNode.id;
               let description = event.target.parentNode.getAttribute("data-id");
                if(choice){
@@ -203,7 +207,8 @@ export class Shelter{
               let reset = document.getElementById('reset').addEventListener('click', _=>{
                   document.getElementById('display').innerHTML = " ";
                   document.getElementById('selectionUser').innerHTML = " ";
-                  this.userSelection={};
+                  document.getElementByClassName("marker").style.visibility = "hidden";
+                  this.userSelection={}
               })
             }
           }

@@ -5,10 +5,10 @@
 * @Filename: style.css
 <<<<<<< HEAD
 * @Last modified by:   sylvain
-* @Last modified time: 2017-02-24T14:06:32+01:00
+* @Last modified time: 2017-04-10T20:26:52+02:00
 =======
-* @Last modified by:   rojas
-* @Last modified time: 25-02-2017
+* @Last modified by:   sylvain
+* @Last modified time: 2017-04-10T20:26:52+02:00
 >>>>>>> c6d0ae764b8354211ae772c2a850733873beae04
 * @Copyright: S.Rojas
 */
@@ -32,7 +32,7 @@ p{
 }
 #welcome{
     width: 300px;
-    margin-left: 74%;
+    margin-left: 83%;
     color: #6BAD4A;
     padding-top: 12px;
     font-size: 1.2em;
@@ -94,8 +94,8 @@ footer.page-footer{
 
 }
 #logout-btn{
-    right: 16%;
-    top:2%;
+    right: 4%;
+    top:8%;
 }
 
 table{
@@ -114,7 +114,7 @@ table{
 }
 
 #modal-btn-save{
-    top:2%;
+    top:86%;
 }
 /*================== MARKERS ====================*/
 .btn-floating.btn-large i{

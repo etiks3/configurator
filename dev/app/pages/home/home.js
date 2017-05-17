@@ -21,11 +21,6 @@ export class HomePage {
         this.initUI();
         this.loadEventUI();
         this.firebaseService = new FirebaseService();
-
-
-
-
-
     }
 
     //HomePage Initialization
@@ -45,7 +40,8 @@ export class HomePage {
             let foundation_marker = document.getElementById("foundation-marker")
             if (foundation_marker) {
                 foundation_marker.addEventListener('click', (e) => {
-                    document.getElementById('start').style.visibility = "hidden";
+                    // document.getElementById('start').style.visibility = "hidden";
+                    console.log('start')
                     let menu_foundation = this.shelter.foundationDisplay()
                     let foundation = document.getElementById("foundations")
                     foundation.innerHTML = menu_foundation;
@@ -152,21 +148,23 @@ export class HomePage {
                     });
             document.getElementById('logout-btn').addEventListener('click', () => {
                     this.firebaseService.logout();
+                    document.getElementById('user').innerHTML=" ";
+                    alert("You are leaving?")
                      });
         }
         // Method to save all projects data in Firebase and link user to database
-        saveData() {
-          if (this.firebaseService.isLogged()) {
-            document.getElementById('logout-btn').innerHTML = '';
-            console.log('hello')
-            this.firebaseService.create(this.shelter.userSelection)
-              .then(
-                (response)=>{
-                  console.log(response);
-                }
-              ).catch(
-              err => console.log(err)
-            )
-          }
-        }
+        // saveData() {
+        //   if (this.firebaseService.isLogged()) {
+        //     document.getElementById('logout-btn').innerHTML = '';
+        //     console.log('hello')
+        //     this.firebaseService.create(this.shelter.userSelection)
+        //       .then(
+        //         (response)=>{
+        //           console.log(response);
+        //         }
+        //       ).catch(
+        //       err => console.log(err)
+        //     )
+        //   }
+        // }
 }
