@@ -40,10 +40,11 @@ p {
 }
 
 #shelter {
-       margin: 0 auto;
+    margin: 0 auto;
     height: auto;
-    left: 3%;
+    left: 7%;
     position: fixed;
+    top: 58%;
 }
 
 #start {
