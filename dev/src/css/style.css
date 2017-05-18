@@ -14,6 +14,16 @@ html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 
+header, main, footer {
+      padding-right: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+
 body {
     background: url(../img/bg/bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -31,12 +41,8 @@ p {
 }
 
 #welcome {
-    width: 300px;
-    margin-left: 83%;
-    margin-left: 61%;
-    color: #6BAD4A;
-    padding-top: 12px;
     font-size: 1.2em;
+    color: black;
 }
 
 #shelter {
@@ -45,6 +51,10 @@ p {
     left: 7%;
     position: fixed;
     top: 58%;
+}
+.userView{
+    background: url(../img/bg/bgme.jpg);
+    height: 162px;
 }
 
 #start {
@@ -105,11 +115,11 @@ footer.page-footer {
     bottom: 0%;
     right: 3%;
 }
-#logout-btn{
+/*#logout-btn{
     right: 4%;
     top:10%;
 
-}
+}*/
 
 #table {
     width: 100%;
@@ -127,10 +137,10 @@ footer.page-footer {
    max-height: 30%;
 }
 
-#modal-btn-save{
+/*#modal-btn-save{
     top:10%;
     right: 30%;
-}
+}*/
 
 
 /*================== MARKERS ====================*/
@@ -248,12 +258,12 @@ footer.page-footer {
     background-color: #6BAD4A !important;
 }
 
-.btn {
+/*.btn {
     background-color: #6BAD4A;
     top: 4%;
     right: 3%;
     position: fixed;
-}
+}*/
 
 
 /*================== DISPLAY CENTER ====================*/
