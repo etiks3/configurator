@@ -49,8 +49,6 @@ p {
     margin: 0 auto;
     height: auto;
     left: 7%;
-    position: fixed;
-    top: 58%;
 }
 .userView{
     background: url(../img/bg/bgme.jpg);
@@ -264,16 +262,14 @@ footer.page-footer {
 
 #display {
     position: fixed;
-    top: 31%;
+    top: 58%;
     left: 18%;
     
 }
 
 #display img {
     position: absolute;
-    width: 1000px;
-    top: 61%;
-    left: 25%;
+    width: 800px;
 }
 
 

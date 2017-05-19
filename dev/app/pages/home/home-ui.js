@@ -23,7 +23,8 @@
             <div id="selectionUser"></div>
           </li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> 
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="position: absolute;
+    right: 14px;">menu</i></a> 
   </div>
   
 
@@ -32,27 +33,27 @@
     <section id="shelter">
     <div id="start"></div>
           <div class="choice1">
-            <button id="foundation-marker" class="marker1 btn-floating btn-large red" ><i class="material-icons">add</i></button>
+            <button id="foundation-marker" class="marker1 btn-floating btn-large markers " ><i class="material-icons">add</i></button>
             <div id="foundations"></div>
           </div>
           <div class="choice2">
-            <button id="structure-marker" class="marker2 btn-floating btn-large red"><i class="material-icons">add</i></button>
+            <button id="structure-marker" class="marker2 btn-floating btn-large markers "><i class="material-icons">add</i></button>
             <div id="structure"></div>
           </div>
           <div class="choice3">
-            <button id="fabric-marker" class="marker3 btn-floating btn-large red"><i class="material-icons">add</i></button>
+            <button id="fabric-marker" class="marker3 btn-floating btn-large markers "><i class="material-icons">add</i></button>
             <div id="fabric"></div>
           </div>
           <div class="choice4">
-            <button id="frontface-marker" class="marker4 btn-floating btn-large red"><i class="material-icons">add</i></button>
+            <button id="frontface-marker" class="marker4 btn-floating btn-large markers "><i class="material-icons">add</i></button>
             <div id="frontface"></div>
           </div>
           <div class="choice5">
-            <button id="door-marker" class="marker5 btn-floating btn-large red"><i class="material-icons">add</i></button>
+            <button id="door-marker" class="marker5 btn-floating btn-large markers "><i class="material-icons">add</i></button>
             <div id="door"></div>
           </div>
           <div class="choice6 ">
-            <button id="color-marker" class="marker6 btn-floating btn-large red"><i class="material-icons">add</i></button>
+            <button id="color-marker" class="marker6 btn-floating btn-large markers "><i class="material-icons">add</i></button>
             <div id="color"></div>
           </div>
           
