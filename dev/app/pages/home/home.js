@@ -29,7 +29,7 @@ export class HomePage {
         // remove all section before display UI
         if (document.getElementsByTagName("section")[0]) {
             document.getElementsByTagName("section")[0].parentNode
-            .removeChild(document.getElementsByTagName("section")[0])
+                .removeChild(document.getElementsByTagName("section")[0])
         }
         // create page skeleton
         let pageSkeleton = homeSkeleton();
@@ -47,15 +47,15 @@ export class HomePage {
 
     //Event Method Group
     loadEventUI() {
-        let foundation_marker = document.getElementById("foundation-marker");   
+        let foundation_marker = document.getElementById("foundation-marker");
         if (foundation_marker) {
-           foundation_marker.addEventListener('click', _ => {
-                document.getElementById('start').style.visibility = "hidden";
+            foundation_marker.addEventListener('click', _ => {
+                /*document.getElementById('start').style.visibility = "hidden";*/
                 let menu_foundation = this.shelter.foundationDisplay()
                 let foundation = document.getElementById("foundations")
                 foundation.innerHTML = menu_foundation;
                 this.shelter.dataFoundEvent()
-        });
+            });
         }
         //A Function to display an item menu on click
         let structure_marker = document.getElementById("structure-marker");
@@ -73,7 +73,7 @@ export class HomePage {
                 this.shelter.dataStructureEvent()
             });
         }
-        
+
         //A Function to display an item menu on click
         let fabric_marker = document.getElementById("fabric-marker");
         if (fabric_marker) {
