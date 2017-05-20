@@ -2,17 +2,7 @@ $Configurateur - Kalpana-Solutions
 ========
 
 $This project is about building garden shelters app configurator to allow customer having a nice preview of their project.
-
-Sources
----------
-
-http://product-configuration.hekkiez.nl/a-simple-product-configurator-for-the-web/
-https://lab.inspira.io/2014/un-repertoire-git-prive-avec-un-nas-synology.html
-
-
-This project will be included in a wordpress theme:
-
-    www.kalpana-solutions.com/votre-abris
+   
 
 
 Features
@@ -23,8 +13,14 @@ Features
 
 Start the app
 ------------
+Open terminal:
+	$nvm use 7
 
-To run the app on a browser, open terminal:
+	$npm install node
+
+	$npm install
+
+To run the app on a browser:
 
 	$gulp
 
