@@ -49,8 +49,7 @@ export class HomePage {
     loadEventUI() {
         let foundation_marker = document.getElementById("foundation-marker");   
         if (foundation_marker) {
-           foundation_marker.addEventListener('click', (e) => {
-               console.log(e)
+           foundation_marker.addEventListener('click', _ => {
                 document.getElementById('start').style.visibility = "hidden";
                 let menu_foundation = this.shelter.foundationDisplay()
                 let foundation = document.getElementById("foundations")
@@ -61,7 +60,7 @@ export class HomePage {
         //A Function to display an item menu on click
         let structure_marker = document.getElementById("structure-marker");
         if (structure_marker) {
-            structure_marker.addEventListener('click', (e) => {
+            structure_marker.addEventListener('click', _ => {
                 let menu_structure = this.shelter.structureDisplay()
                 let structure = document.getElementById("structure")
                 structure.innerHTML = menu_structure;
@@ -78,7 +77,7 @@ export class HomePage {
         //A Function to display an item menu on click
         let fabric_marker = document.getElementById("fabric-marker");
         if (fabric_marker) {
-            fabric_marker.addEventListener('click', (e) => {
+            fabric_marker.addEventListener('click', _ => {
                 let menu_fabric = this.shelter.fabricDisplay()
                 let fabric = document.getElementById("fabric")
                 fabric.innerHTML = menu_fabric;
@@ -95,7 +94,7 @@ export class HomePage {
         //A Function to display an item menu on click
         let color_marker = document.getElementById("color-marker");
         if (color_marker) {
-            color_marker.addEventListener('click', (e) => {
+            color_marker.addEventListener('click', _ => {
                 let menu_color = this.shelter.colorDisplay()
                 let color = document.getElementById("color")
                 color.innerHTML = menu_color;
@@ -111,7 +110,7 @@ export class HomePage {
 
         let door_marker = document.getElementById("door-marker");
         if (door_marker) {
-            door_marker.addEventListener('click', (e) => {
+            door_marker.addEventListener('click', _ => {
                 let menu_door = this.shelter.doorDisplay()
                 let door = document.getElementById("door")
                 door.innerHTML = menu_door;
@@ -126,7 +125,7 @@ export class HomePage {
         }
         let frontface_marker = document.getElementById("frontface-marker");
         if (frontface_marker) {
-            frontface_marker.addEventListener('click', (e) => {
+            frontface_marker.addEventListener('click', _ => {
                 let menu_frontface = this.shelter.frontfaceDisplay()
                 let frontface = document.getElementById("frontface")
                 frontface.innerHTML = menu_frontface;
@@ -141,7 +140,7 @@ export class HomePage {
         }
         let roof_marker = document.getElementById("roof-marker");
         if (roof_marker) {
-            roof_marker.addEventListener('click', (e) => {
+            roof_marker.addEventListener('click', _ => {
                 let menu_roof = this.shelter.roofDisplay()
                 let roof = document.getElementById("roof")
                 roof.innerHTML = menu_roof;

@@ -208,17 +208,13 @@ export class Shelter {
     let selectionUser = document.getElementById('selectionUser');
     let selectors = document.querySelectorAll("#structure-marker, #fabric-marker, #frontface-marker, #door-marker, #color-marker");
     let reset = document.getElementById('reset').addEventListener('click', _ => {
-      let r = confirm("Are you sure to delete all")
-      if (r == true) {
+      // let r = confirm("Are you sure to delete all")
+        for (var i = 0; i < selectors.length; i += 1) {
+        selectors[i].style.visibility = 'hidden'; 
         display.innerHTML = " ";
         selectionUser.innerHTML = " "; 
-          for (var i = 0; i < selectors.length; i += 1) {
-        selectors[i].style.visibility = 'hidden'; 
-      }
-    } else {
-     return false
-    }
       this.userSelection = {}
-    })
-  }
+    }
+  })
+}
 }
