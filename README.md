@@ -2,7 +2,7 @@ $Configurateur - Kalpana-Solutions
 ========
 
 $This project is about building garden shelters app configurator to allow customer having a nice preview of their project.
-   
+   Please feel free to add comment or to contibute
 
 
 Features
